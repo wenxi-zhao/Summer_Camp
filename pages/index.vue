@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section class="hero-banner" :style="{ backgroundImage: 'url(/images/hour-of-ai.jpg)' }">
+    <section class="hero-banner" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
       <div class="content-overlay">
         <h1>数据科学与人工智能夏令营</h1>
         <h2>为初高中生打造的AI实战课程</h2>
@@ -18,7 +18,7 @@
       </div>
     </section>
 
-    <section class="instructors-section" :style="{ backgroundImage: 'url(/images/hour-of-ai.jpg)' }">
+    <section class="instructors-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
       <div class="content-overlay">
         <h2>导师团队</h2>
         <ul>
@@ -29,7 +29,7 @@
       </div>
     </section>
 
-    <section class="features-section" :style="{ backgroundImage: 'url(/images/hour-of-ai.jpg)' }">
+    <section class="features-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
       <div class="content-overlay">
         <h2>课程特色</h2>
         <div class="feature-grid">
@@ -55,7 +55,7 @@
       </div>
     </section>
 
-    <section class="testimonials-section" :style="{ backgroundImage: 'url(/images/hour-of-ai.jpg)' }">
+    <section class="testimonials-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
       <div class="content-overlay">
         <h2>学员反馈</h2>
         <div class="testimonial-grid">
@@ -71,7 +71,7 @@
       </div>
     </section>
 
-    <section class="contact-section" :style="{ backgroundImage: 'url(/images/hour-of-ai.jpg)' }">
+    <section class="contact-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
       <div class="content-overlay">
         <h2>联系我们</h2>
         <div class="contact-info">
