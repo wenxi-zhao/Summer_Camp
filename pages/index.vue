@@ -1,72 +1,83 @@
 <template>
   <div class="container">
-    <section class="hero">
-      <h1>数据科学夏令营</h1>
-      <p class="subtitle">探索数据科学的无限可能</p>
-    </section>
-
-    <section class="features">
-      <h2>课程特色</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>实践导向</h3>
-          <p>通过真实项目学习，培养实际解决问题的能力</p>
+    <section class="hero-banner" :style="{ backgroundImage: 'url(/images/hour-of-ai.jpg)' }">
+      <div class="content-overlay">
+        <h1>数据科学与人工智能夏令营</h1>
+        <h2>为初高中生打造的AI实战课程</h2>
+        <h3>顶尖高校导师亲自指导</h3>
+        <div class="features-list">
+          <div class="feature">🎯 参与实际项目开发</div>
+          <div class="feature">🎯 撰写研究论文</div>
+          <div class="feature">🎯 提升升学竞争力</div>
+          <div class="feature">🧑‍🏫 线上线下结合教学</div>
         </div>
-        <div class="feature-card">
-          <h3>专家指导</h3>
-          <p>业内顶尖专家亲自授课，分享前沿知识</p>
-        </div>
-        <div class="feature-card">
-          <h3>个性化学习</h3>
-          <p>根据个人水平定制学习路径</p>
-        </div>
-        <div class="feature-card">
-          <h3>团队协作</h3>
-          <p>培养团队合作能力，共同完成项目</p>
+        <div class="cta-buttons">
+          <NuxtLink to="/enrollment/form" class="primary-btn">立即报名</NuxtLink>
+          <NuxtLink to="/courses" class="secondary-btn">了解更多</NuxtLink>
         </div>
       </div>
     </section>
 
-    <section class="course-intro">
-      <h2>课程介绍</h2>
-      <div class="course-list">
-        <div class="course-item">
-          <h3>Python 基础</h3>
-          <p>掌握 Python 编程基础，为数据分析打下坚实基础</p>
-        </div>
-        <div class="course-item">
-          <h3>数据分析</h3>
-          <p>学习数据清洗、探索性分析、可视化等核心技能</p>
-        </div>
-        <div class="course-item">
-          <h3>机器学习</h3>
-          <p>深入学习各类机器学习算法及其应用</p>
-        </div>
-        <div class="course-item">
-          <h3>深度学习</h3>
-          <p>探索神经网络和深度学习的前沿应用</p>
+    <section class="instructors-section" :style="{ backgroundImage: 'url(/images/hour-of-ai.jpg)' }">
+      <div class="content-overlay">
+        <h2>导师团队</h2>
+        <ul>
+          <li>清华大学计算机系教授</li>
+          <li>北京大学人工智能研究院研究员</li>
+          <li>业界资深工程师</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="features-section" :style="{ backgroundImage: 'url(/images/hour-of-ai.jpg)' }">
+      <div class="content-overlay">
+        <h2>课程特色</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>🔬 理论与实践结合</h3>
+            <ul>
+              <li>Python编程基础</li>
+              <li>机器学习算法</li>
+              <li>深度学习原理</li>
+              <li>实战项目开发</li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <h3>📊 项目实战驱动</h3>
+            <ul>
+              <li>真实数据集</li>
+              <li>实际应用场景</li>
+              <li>团队协作开发</li>
+              <li>成果展示汇报</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="timeline">
-      <h2>学习路线</h2>
-      <div class="timeline-items">
-        <div class="timeline-item">
-          <h3>第一阶段</h3>
-          <p>Python 编程基础 + 数据结构与算法</p>
+    <section class="testimonials-section" :style="{ backgroundImage: 'url(/images/hour-of-ai.jpg)' }">
+      <div class="content-overlay">
+        <h2>学员反馈</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p>"夏令营让我对AI有了全新的认识，不仅学到了实用的编程技能，更重要的是培养了解决问题的思维方式。"</p>
+            <div class="testimonial-author">-- 张同学，2023届学员</div>
+          </div>
+          <div class="testimonial-card">
+            <p>"导师们都很专业，课程安排也很合理，特别是实战项目的经历对我申请大学很有帮助。"</p>
+            <div class="testimonial-author">-- 李同学，2023届学员</div>
+          </div>
         </div>
-        <div class="timeline-item">
-          <h3>第二阶段</h3>
-          <p>数据分析与可视化</p>
-        </div>
-        <div class="timeline-item">
-          <h3>第三阶段</h3>
-          <p>机器学习基础与应用</p>
-        </div>
-        <div class="timeline-item">
-          <h3>第四阶段</h3>
-          <p>深度学习与项目实战</p>
+      </div>
+    </section>
+
+    <section class="contact-section" :style="{ backgroundImage: 'url(/images/hour-of-ai.jpg)' }">
+      <div class="content-overlay">
+        <h2>联系我们</h2>
+        <div class="contact-info">
+          <p>📧 Email: info@aicamp.edu.cn</p>
+          <p>📱 电话: xxxxxx</p>
+          <p>📍 地址: xxxxx</p>
         </div>
       </div>
     </section>
@@ -80,99 +91,209 @@
   padding: 0 20px;
 }
 
-.hero {
-  text-align: center;
-  padding: 60px 0;
-  background: linear-gradient(135deg, #004AAD 0%, #0066FF 100%);
-  color: white;
+section {
+  margin-bottom: 60px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   border-radius: 10px;
-  margin-bottom: 40px;
+  overflow: hidden;
 }
 
-.hero h1 {
-  font-size: 3em;
+.content-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 60px 20px;
+  color: white;
+}
+
+.hero-banner {
+  text-align: center;
+}
+
+.hero-banner h1 {
+  font-size: 2.5em;
   margin-bottom: 20px;
 }
 
-.subtitle {
-  font-size: 1.5em;
-  opacity: 0.9;
+.hero-banner h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  font-weight: 500;
 }
 
-section {
-  margin-bottom: 60px;
+.hero-banner h3 {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.feature {
+  font-size: 1.2em;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.primary-btn, .secondary-btn {
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #00dc82;
+  color: white;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.primary-btn:hover, .secondary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 40px;
-  color: #004AAD;
+  color: white;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.instructors-section {
+  text-align: center;
+}
+
+.instructors-section ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  font-size: 1.2em;
 }
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  margin-bottom: 40px;
 }
 
 .feature-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.3);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  color: #333;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
 }
 
-.course-list {
+.feature-card h3 {
+  color: #004AAD;
+  margin-bottom: 20px;
+}
+
+.feature-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-card li {
+  margin: 10px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.feature-card li::before {
+  content: "•";
+  color: #004AAD;
+  position: absolute;
+  left: 0;
+}
+
+.testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
-.course-item {
-  background: white;
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.3);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
 }
 
-.timeline-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+.testimonial-card p {
+  font-style: italic;
+  margin-bottom: 15px;
+  line-height: 1.6;
 }
 
-.timeline-item {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.testimonial-author {
+  color: #666;
+  text-align: right;
+}
+
+.contact-section {
   text-align: center;
 }
 
-h3 {
-  color: #004AAD;
-  margin-bottom: 15px;
+.contact-info p {
+  margin: 10px 0;
+  font-size: 1.1em;
 }
 
 @media (max-width: 768px) {
-  .hero h1 {
+  .hero-banner h1 {
     font-size: 2em;
   }
   
-  .subtitle {
+  .hero-banner h2 {
+    font-size: 1.5em;
+  }
+  
+  .hero-banner h3 {
     font-size: 1.2em;
   }
   
   .feature-grid,
-  .course-list,
-  .timeline-items {
+  .testimonial-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .primary-btn, .secondary-btn {
+    width: 100%;
+    text-align: center;
   }
 }
 </style>
