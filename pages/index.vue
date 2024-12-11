@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section class="hero-banner" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
+    <section class="hero-banner" :style="{ backgroundImage: 'url(/Summer_Camp/images/img-1.jpg)' }">
       <div class="content-overlay">
         <h1>数据科学与人工智能夏令营</h1>
         <h2>为初高中生打造的AI实战课程</h2>
@@ -86,9 +86,7 @@
 
 <style scoped>
 .container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 section {
