@@ -117,15 +117,9 @@ onMounted(() => {
 })
 </script>
 
-<style>
-body {
-  margin: 0;
-  padding: 0;
-}
-</style>
-
 <style scoped>
 .navbar {
+  background-color: #004AAD;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -140,14 +134,13 @@ body {
 }
 
 .nav-hidden {
-  transform: translateY(-30%);
-  background-color: #004AAD;
-  transition: background-color 0.5s ease;
-  text-align: center;
+  transform: translateY(-100%);
 }
 
 .main-content {
+  margin-top: 4rem;
   min-height: 200vh;
+  padding: 2rem;
 }
 
 .nav-brand .brand-link {
@@ -221,6 +214,11 @@ body {
 
 .dropdown-item:hover {
   background-color: #f5f5f5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .search-container {
