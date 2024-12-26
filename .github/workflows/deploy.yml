@@ -1,41 +1,24 @@
-name: Deploy to GitHub Pages
-
+name: Deploy to gh-pages
 on:
   push:
     branches:
-      - main  # 设置要部署的源码分支
-
+      - main # 这里的分支名可能需要根据你实际情况修改
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
-          node-version: '18'
-          
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
+          node-version: '14' # 根据项目需要调整 Node 版本
       - name: Install dependencies
-        run: yarn install
-
-      - name: Generate
-        run: yarn generate
-
-      - name: Deploy
+        run: npm install
+      - name: Generate static files
+        run: npm run generate # 这里的命令需要根据项目生成静态文件的实际命令修改
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir:./dist # 这里的目录需要根据静态文件实际存储位置修改
