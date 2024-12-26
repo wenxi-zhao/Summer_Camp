@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section class="hero-banner" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
+    <section class="hero-banner" :style="{ backgroundImage: 'url(/Summer_Camp/images/computer.jpg)' }">
       <div class="content-overlay">
         <h1>数据科学与人工智能夏令营</h1>
         <h2>为初高中生打造的AI实战课程</h2>
@@ -18,18 +18,21 @@
       </div>
     </section>
 
-    <section class="instructors-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
+    <section class="instructors-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/img-2.jpg)' }">
       <div class="content-overlay">
         <h2>导师团队</h2>
         <ul>
-          <li>清华大学计算机系教授</li>
-          <li>北京大学人工智能研究院研究员</li>
+          <li>哈佛大学生物医学信息学教授</li>
+          <li>哈佛大学生物统计学助理教授</li>
+          <li>多伦多大学统计科学系助理教授</li>
+          <li>杜克大学教授</li>
+          <li>浙江大学统计学教授</li>
           <li>业界资深工程师</li>
         </ul>
       </div>
     </section>
 
-    <section class="features-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
+    <section class="features-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/img-3.jpg)' }">
       <div class="content-overlay">
         <h2>课程特色</h2>
         <div class="feature-grid">
@@ -86,13 +89,11 @@
 
 <style scoped>
 .container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 section {
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -103,8 +104,11 @@ section {
 
 .content-overlay {
   background: rgba(0, 0, 0, 0.6);
-  padding: 60px 20px;
+  /* padding: 60px 20px; */
+  padding-top: 60px;
   color: white;
+  height: 100vh;
+  width: 100vw;
 }
 
 .hero-banner {

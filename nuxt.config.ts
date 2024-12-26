@@ -6,4 +6,7 @@ export default defineNuxtConfig({
     baseURL: '/Summer_Camp/', // 仓库名称
     buildAssetsDir: 'assets', // 不要使用_nuxt
   },
+  plugins: [
+    { src: '@/plugins/global.js', mode: 'client' }
+  ],
 })

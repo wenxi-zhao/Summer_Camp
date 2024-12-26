@@ -1,54 +1,70 @@
 <template>
   <div>
-    <nav class="navbar" :class="{ 'nav-hidden': !showNav }">
-      <div class="nav-brand">
-        <NuxtLink to="/" class="brand-link">数据科学夏令营</NuxtLink>
-      </div>
-      <div class="nav-links">
-        <NuxtLink to="/" class="nav-link">首页</NuxtLink>
-        <div class="dropdown">
-          <span class="nav-link">课程体系 <span class="dropdown-arrow">▼</span></span>
-          <div class="dropdown-content">
-            <NuxtLink to="/" class="dropdown-item">课程概览</NuxtLink>
-            <NuxtLink to="/" class="dropdown-item">机器学习课程</NuxtLink>
-          </div>
+    <nav class="navbar" :class="{ 'nav-hidden': !showNav }">    
+      <!-- <div> -->
+        <div class="nav-brand">
+          <NuxtLink to="/" class="brand-link">数据科学夏令营</NuxtLink>
         </div>
-        <NuxtLink to="/" class="nav-link">报名选拔</NuxtLink>
-        <NuxtLink to="/" class="nav-link">学习资源</NuxtLink>
-        <NuxtLink to="/" class="nav-link">活动动态</NuxtLink>
-        <NuxtLink to="/" class="nav-link">学习追踪</NuxtLink>
-      </div>
-      <div class="nav-right">
-        <div class="search-container" :class="{ 'active': isSearchActive }">
-          <div class="search-box">
-            <input 
-              type="text" 
-              v-model="searchQuery" 
-              @focus="isSearchActive = true"
-              @blur="handleSearchBlur"
-              placeholder="搜索..."
-              class="search-input"
-            >
-            <div v-if="isSearchActive && searchResults.length > 0" class="search-results">
-              <div class="results-count">{{ searchResults.length }} 匹配的文档</div>
-              <div 
-                v-for="result in searchResults" 
-                :key="result.id"
-                class="search-result-item"
-                @mousedown="handleResultClick(result)"
+        <div class="nav-links">
+          <NuxtLink to="/" class="nav-link">首页</NuxtLink>
+          <div class="dropdown">
+            <span class="nav-link">课程体系 <span class="dropdown-arrow">▼</span></span>
+            <div class="dropdown-content">
+              <NuxtLink to="/" class="dropdown-item">课程概览</NuxtLink>
+              <NuxtLink to="/" class="dropdown-item">机器学习课程</NuxtLink>
+            </div>
+          </div>
+          <NuxtLink to="/" class="nav-link">报名选拔</NuxtLink>
+          <div class="dropdown">
+            <span class="nav-link">学习资源<span class="dropdown-arrow">▼</span></span>
+            <div class="dropdown-content">
+              <NuxtLink to="https://learn-from-zero.netlify.app" class="dropdown-item">Python教程</NuxtLink>
+              <NuxtLink to="https://celehs.github.io/CELEHS-Data-Science-Summer-Camp/car_building.html" class="dropdown-item">制作树莓派小车</NuxtLink>
+              <NuxtLink to="https://celehs.github.io/CELEHS-Data-Science-Summer-Camp/week_1.html" class="dropdown-item">Python 基础</NuxtLink>
+              <NuxtLink to="https://celehs.github.io/CELEHS-Data-Science-Summer-Camp/week_2.html" class="dropdown-item">统计与机器学习</NuxtLink>
+            </div>
+          </div>
+          <div class="dropdown">
+            <span class="nav-link">活动动态<span class="dropdown-arrow">▼</span></span>
+            <div class="dropdown-content">
+              <NuxtLink to="https://mp.weixin.qq.com/s/BsAXv8Ft-XfY5XvR4LXoqA" class="dropdown-item">夏令营开营</NuxtLink>
+              <NuxtLink to="https://mp.weixin.qq.com/s/vYb7A_SccRro19v9psugdw" class="dropdown-item">数据科学筑梦记</NuxtLink>
+            </div>
+          </div>
+          <NuxtLink to="/" class="nav-link">学习追踪</NuxtLink>
+        </div>
+        <div class="nav-right">
+          <div class="search-container" :class="{ 'active': isSearchActive }">
+            <div class="search-box">
+              <input 
+                type="text" 
+                v-model="searchQuery" 
+                @focus="isSearchActive = true"
+                @blur="handleSearchBlur"
+                placeholder="搜索..."
+                class="search-input"
               >
-                <div class="result-title">{{ result.title }}</div>
-                <div class="result-content">{{ result.content }}</div>
+              <div v-if="isSearchActive && searchResults.length > 0" class="search-results">
+                <div class="results-count">{{ searchResults.length }} 匹配的文档</div>
+                <div 
+                  v-for="result in searchResults" 
+                  :key="result.id"
+                  class="search-result-item"
+                  @mousedown="handleResultClick(result)"
+                >
+                  <div class="result-title">{{ result.title }}</div>
+                  <div class="result-content">{{ result.content }}</div>
+                </div>
               </div>
             </div>
           </div>
+          <NuxtLink to="/" class="nav-link">中文</NuxtLink>
+          <NuxtLink to="/" class="nav-link">English</NuxtLink>
+          <a href="https://github.com/your-repo" target="_blank" class="nav-link">
+            <img src="/github-mark.svg" alt="GitHub" class="github-icon">
+          </a>
         </div>
-        <NuxtLink to="/" class="nav-link">中文</NuxtLink>
-        <NuxtLink to="/" class="nav-link">English</NuxtLink>
-        <a href="https://github.com/your-repo" target="_blank" class="nav-link">
-          <img src="/github-mark.svg" alt="GitHub" class="github-icon">
-        </a>
-      </div>
+      <!-- </div> -->
     </nav>
     <main class="main-content">
       <NuxtPage />
@@ -117,9 +133,15 @@ onMounted(() => {
 })
 </script>
 
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+</style>
+
 <style scoped>
 .navbar {
-  background-color: #004AAD;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -134,13 +156,14 @@ onMounted(() => {
 }
 
 .nav-hidden {
-  transform: translateY(-100%);
+  /* transform: translateY(-30%); */
+  background-color: #004AAD;
+  transition: background-color 0.5s ease;
+  text-align: center;
 }
 
 .main-content {
-  margin-top: 4rem;
   min-height: 200vh;
-  padding: 2rem;
 }
 
 .nav-brand .brand-link {
@@ -214,11 +237,6 @@ onMounted(() => {
 
 .dropdown-item:hover {
   background-color: #f5f5f5;
-}
-
-body {
-  margin: 0;
-  padding: 0;
 }
 
 .search-container {
