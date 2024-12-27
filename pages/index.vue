@@ -1,19 +1,30 @@
 <template>
   <div class="container">
     <section class="hero-banner" :style="{ backgroundImage: 'url(/Summer_Camp/images/computer.jpg)' }">
-      <div class="content-overlay">
-        <h1>数据科学与人工智能夏令营</h1>
-        <h2>为初高中生打造的AI实战课程</h2>
-        <h3>顶尖高校导师亲自指导</h3>
-        <div class="features-list">
-          <div class="feature">🎯 参与实际项目开发</div>
-          <div class="feature">🎯 撰写研究论文</div>
-          <div class="feature">🎯 提升升学竞争力</div>
-          <div class="feature">🧑‍🏫 线上线下结合教学</div>
-        </div>
-        <div class="cta-buttons">
-          <NuxtLink to="/enrollment/form" class="primary-btn">立即报名</NuxtLink>
-          <NuxtLink to="/courses" class="secondary-btn">了解更多</NuxtLink>
+      <div class="content-overlay" >
+        <div class="banner1">
+          <h1 id="data-h1">数据科学与人工智能</h1>
+          <h1 id="summer-h1">夏令营</h1>
+          <!-- <h2>为初高中生打造的AI实战课程</h2> -->
+          <h3>工业4.0时代下先人一步</h3>
+          <!-- <div class="features-list">
+            <div class="feature">🎯 参与实际项目开发</div>
+            <div class="feature">🎯 撰写研究论文</div>
+            <div class="feature">🎯 提升升学竞争力</div>
+            <div class="feature">🧑‍🏫 线上线下结合教学</div>
+          </div> -->
+          <div class="cta-buttons">
+            <NuxtLink to="/enrollment/form" class="primary-btn">立即报名</NuxtLink>
+            <!-- <NuxtLink to="/courses" class="secondary-btn">了解更多</NuxtLink> -->
+          </div>
+          <aside class="banner-intro">
+            <div class = "color-block"></div>
+            <div class = "font-block">
+              <p class="intro-p1">专为初高中生设计的AI与编程实践课程</p>
+              <p class="intro-p2">顶尖高校导师亲自指导</p>
+              <p class="intro-p3">掌握Python编程，机器学习，深度学习等核心技术</p>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -88,12 +99,63 @@
 </template>
 
 <style scoped>
+.banner-intro {
+  color: white; /* 白色文字 */
+  padding: 10px; /* 内边距 */
+  position: absolute; /* 绝对定位 */
+  right: 18%; /* 靠右对齐 */
+  bottom: -95%; /* 从顶部开始50像素的位置，根据需要调整 */
+  width: 30%; /* 宽度，根据需要调整 */
+  height: auto; /* 高度自适应内容 */
+}
+
+.banner-intro .color-block {
+  background-color: rgba(107, 52, 147, 0.9);
+  width: 100%;
+  height: 100%;
+  transform: skew(-10deg);
+  position: absolute; /* 绝对定位 */
+  top: 0;
+  left: 0;
+}
+
+.banner-intro p {
+  margin: 30px; /* 去掉段落的上下外边距 */
+  padding: 0px; /* 段落内边距 */
+  font-size: 1.7em; /* 字体大小 */
+  transform: skew(0deg);
+  position: relative; /* 相对定位 */
+}
+
+.banner-intro .intro-p2 {
+  left: -1%; /* 从左侧开始10%的位置 */
+}
+
+.banner-intro .intro-p3 {
+  left: -3%; /* 从左侧开始10%的位置 */
+}
+
+.banner1 {
+  position: relative; /* 确保相对定位，这样子元素的绝对定位会相对于此元素定位 */
+  left: 10%; 
+  top: 5%; 
+}
+
+.banner1 #data-h1,
+.banner1 #summer-h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.banner1 .cta-buttons {
+  position: absolute;
+}
+
 .container {
   margin: 0 auto;
 }
 
 section {
-  /* margin-bottom: 60px; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -102,9 +164,14 @@ section {
   overflow: hidden;
 }
 
+.banner1{
+  padding-top: 60px;
+  color: white;
+  text-align: left;
+}
+
 .content-overlay {
   background: rgba(0, 0, 0, 0.6);
-  /* padding: 60px 20px; */
   padding-top: 60px;
   color: white;
   height: 100vh;
@@ -116,8 +183,8 @@ section {
 }
 
 .hero-banner h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+  font-size: 6.5em;
+  letter-spacing: 5px;
 }
 
 .hero-banner h2 {
@@ -127,9 +194,10 @@ section {
 }
 
 .hero-banner h3 {
-  font-size: 1.5em;
+  font-size: 3em;
   margin-bottom: 30px;
   font-weight: 400;
+  letter-spacing: 5px;
 }
 
 .features-list {
@@ -152,16 +220,17 @@ section {
 }
 
 .primary-btn, .secondary-btn {
-  padding: 12px 30px;
-  border-radius: 25px;
-  font-size: 1.1em;
+  padding: 5px 70px;
+  border-radius: 5px;
+  font-size: 1.7em;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .primary-btn {
-  background-color: #00dc82;
+  background-color: rgba(107, 52, 147, 0.9);
   color: white;
+  letter-spacing: 5px;
 }
 
 .secondary-btn {
