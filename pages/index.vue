@@ -3,16 +3,9 @@
     <section class="hero-banner" :style="{ backgroundImage: 'url(/Summer_Camp/images/computer.jpg)' }">
       <div class="content-overlay" >
         <div class="banner1">
-          <h1 id="data-h1">数据科学与人工智能</h1>
-          <h1 id="summer-h1">夏令营</h1>
-          <!-- <h2>为初高中生打造的AI实战课程</h2> -->
+          <h1 id="data-h1">数据科学夏令营</h1>
+          <!-- <h1 id="summer-h1">夏令营</h1> -->
           <h3>工业4.0时代下先人一步</h3>
-          <!-- <div class="features-list">
-            <div class="feature">🎯 参与实际项目开发</div>
-            <div class="feature">🎯 撰写研究论文</div>
-            <div class="feature">🎯 提升升学竞争力</div>
-            <div class="feature">🧑‍🏫 线上线下结合教学</div>
-          </div> -->
           <div class="cta-buttons">
             <NuxtLink to="/enrollment/form" class="primary-btn">立即报名</NuxtLink>
             <!-- <NuxtLink to="/courses" class="secondary-btn">了解更多</NuxtLink> -->
@@ -103,10 +96,11 @@
   color: white; /* 白色文字 */
   padding: 10px; /* 内边距 */
   position: absolute; /* 绝对定位 */
-  right: 18%; /* 靠右对齐 */
-  bottom: -95%; /* 从顶部开始50像素的位置，根据需要调整 */
-  width: 30%; /* 宽度，根据需要调整 */
+  right: 15vw; /* 靠右对齐 */
+  bottom: -65vh; /* 从顶部开始50像素的位置，根据需要调整 */
+  width: 30vw; /* 宽度，根据需要调整 */
   height: auto; /* 高度自适应内容 */
+  margin-bottom: 3vh;
 }
 
 .banner-intro .color-block {
@@ -172,10 +166,10 @@ section {
 
 .content-overlay {
   background: rgba(0, 0, 0, 0.6);
-  padding-top: 60px;
+  /* padding-top: 60px; */
   color: white;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .hero-banner {
@@ -198,14 +192,6 @@ section {
   margin-bottom: 30px;
   font-weight: 400;
   letter-spacing: 5px;
-}
-
-.features-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 30px;
-  align-items: center;
 }
 
 .feature {
@@ -249,6 +235,7 @@ h2 {
   color: white;
   margin-bottom: 30px;
   font-size: 2em;
+  margin-top: 0;
 }
 
 .instructors-section {

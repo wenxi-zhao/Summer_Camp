@@ -1,7 +1,6 @@
 <template>
   <div>
     <nav class="navbar" :class="{ 'nav-hidden': !showNav }">    
-      <!-- <div> -->
         <div class="nav-brand">
           <NuxtLink to="/" class="brand-link">数据科学夏令营</NuxtLink>
         </div>
@@ -64,7 +63,6 @@
             <img src="/github-mark.svg" alt="GitHub" class="github-icon">
           </a>
         </div>
-      <!-- </div> -->
     </nav>
     <main class="main-content">
       <NuxtPage />
