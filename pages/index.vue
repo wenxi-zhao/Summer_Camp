@@ -5,7 +5,7 @@
         <div class="banner1">
           <h1 id="data-h1">数据科学夏令营</h1>
           <!-- <h1 id="summer-h1">夏令营</h1> -->
-          <h3>工业4.0时代下先人一步</h3>
+          <h3>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—— 用编程与实践掌握未来，助力科学梦想起航</h3>
           <div class="cta-buttons">
             <NuxtLink to="/enrollment/form" class="primary-btn">立即报名</NuxtLink>
             <!-- <NuxtLink to="/courses" class="secondary-btn">了解更多</NuxtLink> -->
@@ -14,15 +14,15 @@
         <aside class="banner-intro">
           <div class = "color-block"></div>
           <div class = "font-block">
-            <p class="intro-p1">专为初高中生设计的AI与编程实践课程</p>
-            <p class="intro-p2">顶尖高校导师亲自指导</p>
-            <p class="intro-p3">掌握Python编程，机器学习，深度学习等核心技术</p>
+            <p class="intro-p1">专为初高中生设计的AI与编程实践课程，通过动手制作智能小车，在趣味十足的项目中学习Python编程、机器学习、深度学习等前沿技术，课程由顶尖高校导师亲自指导，带领学生走在科技最前沿。</p>
+            <!-- <p class="intro-p2">顶尖高校导师亲自指导</p>
+            <p class="intro-p3">掌握Python编程，机器学习，深度学习等核心技术</p> -->
           </div>
         </aside>
       </div>
     </section>
 
-    <section class="instructors-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/img-1.jpg)' }">
+    <section class="instructors-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/computer.jpg)' }">
       <div class="content-overlay">
         <div class="instructors-text">
           <h3>课程介绍</h3>
@@ -32,13 +32,11 @@
             <li>智能无人小车搭建</li>
           </ul>
         </div>
-        <div class="instructors-img">
-          <div class="center-img"></div>
-          <div class="right-img">
-            <div class="right-img-1"></div>
-            <div class="right-img-2"></div>
-            <div class="right-img-3"></div>
-          </div>
+        <div class="center-img"></div>
+        <div class="right-img">
+          <div class="right-img-1"></div>
+          <div class="right-img-2"></div>
+          <div class="right-img-3"></div>
         </div>
       </div>
     </section>
@@ -99,20 +97,26 @@
 </template>
 
 <style scoped>
-.instructors-img .center-img, 
+.center-img, 
 .right-img-1,
 .right-img-2,
 .right-img-3 {
-  position: absolute; 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.instructors-img .center-img {
+.right-img{
+  position: absolute; 
+  top: 17vh;
+  left: 75vw;
+}
+
+.center-img {
+  position: absolute; 
   background-image: url('/Summer_Camp/images/img-2.jpg');
-  width: 35vw;
-  height: 35vw;
+  width: 38vw;
+  height: 38vw;
   left: 50%;
   transform: translateX(-50%); /* position+left+transform实现块儿元素的水平居中 */
   bottom: -8%;
@@ -122,23 +126,35 @@
 .right-img-1, .right-img-2, .right-img-3 {
   width: 16.5vw;
   height: 22vh;
-  /* -webkit-mask: radial-gradient(circle at center, white 70%, transparent 100%);
-  mask: radial-gradient(circle at center, white 70%, transparent 100%); */
-  /* -webkit-mask: linear-gradient(to bottom, white 70%, transparent 100%);
-  mask: linear-gradient(to bottom, white 70%, transparent 100%); */
+}
+
+.right-img-1, .right-img-2{
+  margin-bottom: 6vh;
+}
+
+.right-img-1, .right-img-3{
+  position:relative;
+  right:3vw;
 }
 
 .right-img-1 {
   background-image: url('/Summer_Camp/images/img-3.jpg');
-  right: 10%;
-  top: 10%;
+}
+
+.right-img-2 {
+  background-image: url('/Summer_Camp/images/img-3.jpg');
+}
+
+.right-img-3 {
+  background-image: url('/Summer_Camp/images/img-3.jpg');
 }
 
 .instructors-text{
   position: relative;
   text-align: left;
   left: 10%;
-  top: 5%;
+  top: 10%;
+  display: inline-block;
 }
 
 .instructors-text h3 {
@@ -162,11 +178,11 @@
   color: white; /* 白色文字 */
   padding: 10px; /* 内边距 */
   position: absolute; /* 绝对定位 */
-  right: 10vw; /* 靠右对齐 */
+  right: 5vw; /* 靠右对齐 */
   bottom: -7vh; /* 从顶部开始50像素的位置，根据需要调整 */
   width: 30vw; /* 宽度，根据需要调整 */
   height: auto; /* 高度自适应内容 */
-  margin-bottom: 3vh;
+  margin-bottom: 6vh;
   text-align: left; /* 文字左对齐 */
 }
 
