@@ -22,14 +22,22 @@
       </div>
     </section>
 
-    <section class="instructors-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/computer.jpg)' }">
+    <section class="instructors-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/img-3.jpg)' }">
       <div class="content-overlay">
         <div class="instructors-text">
           <h3>课程介绍</h3>
+          <h4 class="h4-1">理论与实践并重</h4>
           <ul>
-            <li>Python编程基础</li>
-            <li>机器学习与深度学习</li>
-            <li>智能无人小车搭建</li>
+            <li>Python编程基础与应用</li>
+            <li>机器学习与深度学习算法</li>
+            <li>实战项目驱动，技术应用全面提升</li>
+          </ul>
+          <h4 class="h4-2">动手实践，寓教于乐</h4>
+          <ul>
+            <li>搭建树莓派驱动的智能小车，探索硬件与编程的结合</li>
+            <li>使用真实数据集进行建模与分析，解决实际问题</li>
+            <li>团队协作，提升工程开发能力</li>
+            <li>成果展示与英文小组汇报，提升演讲技能与语言表达能力，培养国际化沟通技巧</li>
           </ul>
         </div>
         <div class="center-img"></div>
@@ -115,8 +123,8 @@
 .center-img {
   position: absolute; 
   background-image: url('/Summer_Camp/images/img-2.jpg');
-  width: 38vw;
-  height: 38vw;
+  width: 33vw;
+  height: 33vw;
   left: 50%;
   transform: translateX(-50%); /* position+left+transform实现块儿元素的水平居中 */
   bottom: -8%;
@@ -138,15 +146,15 @@
 }
 
 .right-img-1 {
-  background-image: url('/Summer_Camp/images/img-3.jpg');
+  background-image: url('/Summer_Camp/images/img-5.jpg');
 }
 
 .right-img-2 {
-  background-image: url('/Summer_Camp/images/img-3.jpg');
+  background-image: url('/Summer_Camp/images/img-6.jpg');
 }
 
 .right-img-3 {
-  background-image: url('/Summer_Camp/images/img-3.jpg');
+  background-image: url('/Summer_Camp/images/img-7.jpg');
 }
 
 .instructors-text{
@@ -155,6 +163,7 @@
   left: 10%;
   top: 10%;
   display: inline-block;
+  width: 20vw; 
 }
 
 .instructors-text h3 {
@@ -163,15 +172,29 @@
   letter-spacing: 5px;
 }
 
+.instructors-text h4 {
+  font-size: 1.5em;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.instructors-text .h4-1{
+  margin-top: 6vh;
+}
+
+.instructors-text .h4-2{
+  margin-top: 3vh;
+}
+
 .instructors-text ul {
-  font-size: 2em;
+  font-size: 0.9em;
   font-weight: 100;
   letter-spacing: 3px;
-  margin: 75px 0 0 0;
+  /* margin: 75px 0 0 0; */
 }
 
 .instructors-text ul li {
-  line-height: 2.7;
+  line-height: 2;
 }
 
 .banner-intro {
@@ -314,7 +337,7 @@ section {
 }
 
 /* 清除各种格子占用空间 */
-h2, h3, ul, li, p {
+h2, h3, h4, ul, li, p {
   /* text-align: center;
   color: white;
   margin-bottom: 30px;
@@ -334,7 +357,7 @@ h2, h3, ul, li, p {
 } */
 
 .instructors-section .content-overlay{
-  background-color: rgba(107, 52, 147, 0.8);
+  /* background-color: rgba(107, 52, 147, 0.8); */
 }
 
 .feature-grid {
