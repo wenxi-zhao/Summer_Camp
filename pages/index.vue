@@ -4,42 +4,40 @@
       <div class="content-overlay" >
         <div class="banner1">
           <h1 id="data-h1">数据科学夏令营</h1>
-          <!-- <h1 id="summer-h1">夏令营</h1> -->
           <h3>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—— 用编程与实践掌握未来，助力科学梦想起航</h3>
           <div class="cta-buttons">
             <NuxtLink to="/enrollment/form" class="primary-btn">立即报名</NuxtLink>
-            <!-- <NuxtLink to="/courses" class="secondary-btn">了解更多</NuxtLink> -->
           </div>
         </div>
         <aside class="banner-intro">
           <div class = "color-block"></div>
           <div class = "font-block">
             <p class="intro-p1">专为初高中生设计的AI与编程实践课程，通过动手制作智能小车，在趣味十足的项目中学习Python编程、机器学习、深度学习等前沿技术，课程由顶尖高校导师亲自指导，带领学生走在科技最前沿。</p>
-            <!-- <p class="intro-p2">顶尖高校导师亲自指导</p>
-            <p class="intro-p3">掌握Python编程，机器学习，深度学习等核心技术</p> -->
           </div>
         </aside>
       </div>
     </section>
 
-    <section class="instructors-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/img-3.jpg)' }">
+    <section class="instructors-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/computer.jpg)' }">
       <div class="content-overlay">
         <div class="instructors-text">
           <h3>课程介绍</h3>
           <h4 class="h4-1">理论与实践并重</h4>
           <ul>
-            <li>Python编程基础与应用</li>
+            <li class="li-f">Python编程基础与应用</li>
             <li>机器学习与深度学习算法</li>
-            <li>实战项目驱动，技术应用全面提升</li>
+            <li class="li-e">实战项目驱动，技术应用全面提升</li>
           </ul>
           <h4 class="h4-2">动手实践，寓教于乐</h4>
           <ul>
-            <li>搭建树莓派驱动的智能小车，探索硬件与编程的结合</li>
+            <li class="li-f">搭建树莓派驱动的智能小车，探索硬件与编程的结合</li>
             <li>使用真实数据集进行建模与分析，解决实际问题</li>
             <li>团队协作，提升工程开发能力</li>
-            <li>成果展示与英文小组汇报，提升演讲技能与语言表达能力，培养国际化沟通技巧</li>
+            <li class="li-e">成果展示与英文小组汇报，提升演讲技能与语言表达能力，培养国际化沟通技巧</li>
           </ul>
         </div>
+        <div class="center-img-redcircle"></div>
+        <div class="center-line"></div>
         <div class="center-img"></div>
         <div class="right-img">
           <div class="right-img-1"></div>
@@ -108,7 +106,9 @@
 .center-img, 
 .right-img-1,
 .right-img-2,
-.right-img-3 {
+.right-img-3,
+.center-img-redcircle,
+.center-line{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -123,12 +123,32 @@
 .center-img {
   position: absolute; 
   background-image: url('/Summer_Camp/images/img-2.jpg');
-  width: 33vw;
-  height: 33vw;
+  width: 36vw;
+  height: 36vw;
   left: 50%;
   transform: translateX(-50%); /* position+left+transform实现块儿元素的水平居中 */
   bottom: -8%;
   border-radius: 50%;
+}
+
+.center-img-redcircle {
+  position: absolute; 
+  background-image: url('/Summer_Camp/images/2-redcircle.png');
+  width: 40vw;
+  height: 40vw;
+  left: 63%;
+  transform: translateX(-50%); /* position+left+transform实现块儿元素的水平居中 */
+  bottom: -8%;
+}
+
+.center-line {
+  position: absolute; 
+  background-image: url('/Summer_Camp/images/2-line.png');
+  width: 15vw;
+  height: 15vw;
+  left: 74%;
+  transform: translateX(-50%); /* position+left+transform实现块儿元素的水平居中 */
+  top: 1%;
 }
 
 .right-img-1, .right-img-2, .right-img-3 {
@@ -146,15 +166,15 @@
 }
 
 .right-img-1 {
-  background-image: url('/Summer_Camp/images/img-5.jpg');
+  background-image: url('/Summer_Camp/images/2-small-img-1.png');
 }
 
 .right-img-2 {
-  background-image: url('/Summer_Camp/images/img-6.jpg');
+  background-image: url('/Summer_Camp/images/2-small-img-2.png');
 }
 
 .right-img-3 {
-  background-image: url('/Summer_Camp/images/img-7.jpg');
+  background-image: url('/Summer_Camp/images/2-small-img-3.png');
 }
 
 .instructors-text{
@@ -163,38 +183,71 @@
   left: 10%;
   top: 10%;
   display: inline-block;
-  width: 20vw; 
+  width: 30vw; 
+  z-index: 1;
 }
 
 .instructors-text h3 {
   font-size: 3em;
   font-weight: 400;
   letter-spacing: 5px;
+  text-shadow: 5px 4px 4px #000000; 
 }
 
 .instructors-text h4 {
   font-size: 1.5em;
   font-weight: 400;
   letter-spacing: 3px;
+  background-color: rgba(107, 52, 147, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
 }
 
 .instructors-text .h4-1{
   margin-top: 6vh;
+  width: 10vw;
 }
 
 .instructors-text .h4-2{
   margin-top: 3vh;
+  width: 13vw;
 }
 
 .instructors-text ul {
-  font-size: 0.9em;
+  font-size: 1.3em;
   font-weight: 100;
   letter-spacing: 3px;
-  /* margin: 75px 0 0 0; */
+  margin: 15px 0 0 0;
+  list-style-type: none; /* 去掉默认的圆点 */
+  padding: 0; /* 去掉默认的内边距 */
 }
 
 .instructors-text ul li {
-  line-height: 2;
+  line-height: 1.7;
+  text-shadow: 5px 4px 4px #000000; 
+  padding-left: 20px;
+  position: relative;
+}
+
+.instructors-text ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: white;
+}
+
+.instructors-text ul .li-f::before {
+  height:2vh;
+  top: auto;
+}
+
+.instructors-text ul .li-e::before {
+  height:2vh;
+  bottom: auto;
 }
 
 .banner-intro {
@@ -338,26 +391,7 @@ section {
 
 /* 清除各种格子占用空间 */
 h2, h3, h4, ul, li, p {
-  /* text-align: center;
-  color: white;
-  margin-bottom: 30px;
-  font-size: 2em; */
   margin: 0;
-  /* padding: 0; */
-}
-
-/* .instructors-section ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-  font-size: 1.2em;
-} */
-
-.instructors-section .content-overlay{
-  /* background-color: rgba(107, 52, 147, 0.8); */
 }
 
 .feature-grid {
