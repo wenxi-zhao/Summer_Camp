@@ -47,29 +47,31 @@
       </div>
     </section>
 
-    <section class="features-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/img-3.jpg)' }">
+    <section class="features-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/computer.jpg)' }">
       <div class="content-overlay">
-        <h2>课程特色</h2>
-        <div class="feature-grid">
-          <div class="feature-card">
-            <h3>🔬 理论与实践结合</h3>
-            <ul>
-              <li>Python编程基础</li>
-              <li>机器学习算法</li>
-              <li>深度学习原理</li>
-              <li>实战项目开发</li>
-            </ul>
-          </div>
-          <div class="feature-card">
-            <h3>📊 项目实战驱动</h3>
-            <ul>
-              <li>真实数据集</li>
-              <li>实际应用场景</li>
-              <li>团队协作开发</li>
-              <li>成果展示汇报</li>
-            </ul>
-          </div>
+        <div class="professors-list">
+          <div class="three-tutor1"></div>
+          <ul>
+            <li>哈佛大学生物医学信息学教授</li>
+            <li>哈佛大学生物统计学助理教授</li>
+            <li>多伦多大学统计科学系助理教授</li>
+            <li>杜克大学教授</li>
+            <li>浙江大学统计学教授</li>
+            <li>业界资深工程师</li>
+          </ul>
+          <div class="three-line"></div>
         </div>
+        <div class = "team">
+          <h3>导师团队</h3>
+          <div class = "color-block"></div>
+        </div>
+        <div class="three-tutor2"></div>
+        <aside class="tutor-intro">
+          <div class = "color-block"></div>
+          <div class = "font-block">
+            <p class="intro-p1">我们的导师团队由多位世界名校的教授及业界资深工程师组成，拥有丰富的教学经验和实践背景，致力于为学生提供优质的教育。</p>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -103,12 +105,99 @@
 </template>
 
 <style scoped>
+.three-line {
+  position: absolute; 
+  background-image: url('/Summer_Camp/images/three-line.png');
+  width: 25vw;
+  height: 25vw;
+  bottom: -30%;
+  z-index: -1;
+}
+
+.three-tutor1 {
+  background-image: url('/Summer_Camp/images/three-tutor1.png');
+  width: 45vw;
+  height: 54vh;
+}
+
+.features-section {
+  position: relative;
+}
+
+.team {
+  position: relative;
+  top: -65%;
+  right: 8%;
+  text-align: right;
+}
+
+.features-section .team h3 {
+  font-size: 2.4em;
+  letter-spacing: 5px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 5px 4px 4px #000000; 
+  font-weight: 400;
+}
+
+.team .color-block {
+  background-color: rgba(107, 52, 147, 0.9);
+  width: 13vw;
+  height: 2.6vh;
+  position: absolute; /* 绝对定位 */
+  top: 55%;
+  left: 86.8%;
+  z-index: 0;
+}
+
+.three-tutor2{
+  background-image: url('/Summer_Camp/images/three-tutor2.png');
+  width: 32vw;
+  height: 32vh;
+  position: absolute;
+  right:8vw;
+  top: 27%;
+}
+
+.tutor-intro {
+  color: white; /* 白色文字 */
+  padding: 10px; /* 内边距 */
+  position: absolute; /* 绝对定位 */
+  right: 5vw; /* 靠右对齐 */
+  bottom: -1.3vh; /* 从顶部开始50像素的位置，根据需要调整 */
+  width: 30vw; /* 宽度，根据需要调整 */
+  height: auto; /* 高度自适应内容 */
+  margin-bottom: 6vh;
+  text-align: left; /* 文字左对齐 */
+}
+
+.tutor-intro .color-block {
+  background-color: rgba(107, 52, 147, 0.9);
+  width: 100%;
+  height: 100%;
+  transform: skew(-10deg);
+  position: absolute; /* 绝对定位 */
+  top: 0;
+  left: 0;
+}
+
+.tutor-intro p {
+  margin: 30px; /* 去掉段落的上下外边距 */
+  padding: 0px; /* 段落内边距 */
+  font-size: 1.7em; /* 字体大小 */
+  transform: skew(0deg);
+  position: relative; /* 相对定位 */
+}
+
 .center-img, 
 .right-img-1,
 .right-img-2,
 .right-img-3,
 .center-img-redcircle,
-.center-line{
+.center-line,
+.three-tutor1,
+.three-tutor2,
+.three-line {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -177,7 +266,8 @@
   background-image: url('/Summer_Camp/images/2-small-img-3.png');
 }
 
-.instructors-text{
+.instructors-text,
+.professors-list{
   position: relative;
   text-align: left;
   left: 10%;
@@ -214,6 +304,31 @@
   width: 13vw;
 }
 
+.professors-list ul{
+  font-size: 1.3em;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin: 30px 0 0 10px;
+  list-style-type: none; /* 去掉默认的圆点 */
+  padding: 0; /* 去掉默认的内边距 */
+}
+
+.professors-list ul li {
+  line-height: 1.7;
+  text-shadow: 5px 4px 4px #000000; 
+  padding-left: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.professors-list ul li::before {
+    content: '•'; /* 使用自定义字符作为点 */
+    font-size: 10px; /* 调整字符大小 */
+    position: absolute;
+    left: 0;
+}
+
 .instructors-text ul {
   font-size: 1.3em;
   font-weight: 100;
@@ -230,6 +345,7 @@
   position: relative;
 }
 
+/* 点变线 */
 .instructors-text ul li::before {
   content: "";
   position: absolute;
@@ -411,11 +527,6 @@ h2, h3, h4, ul, li, p {
 
 .feature-card:hover {
   transform: translateY(-5px);
-}
-
-.feature-card h3 {
-  color: #004AAD;
-  margin-bottom: 20px;
 }
 
 .feature-card ul {
