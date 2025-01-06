@@ -1,25 +1,5 @@
 <template>
   <div class="user-form">
-    <form name="user-form" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-      <!-- Honeypot field to prevent spam bots -->
-      <input type="hidden" name="bot-field" />
-
-      <!-- Your form fields here -->
-      <div>
-        <label for="username">用户名:</label>
-        <input type="text" id="username" name="username" required />
-      </div>
-      <div>
-        <label for="email">邮箱:</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div>
-        <label for="message">信息:</label>
-        <textarea id="message" name="message"></textarea>
-      </div>
-
-      <!-- Submit button -->
-      <button type="submit">提交</button>
-    </form>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfbQndahO_5c3buzPvWLsKlFY-t3zXW7GpAlL4t71gb_j5bIw/viewform?embedded=true" width="100%" height="1297" frameborder="0" marginheight="0" marginwidth="0">正在加载…</iframe>
   </div>
 </template>
