@@ -106,7 +106,7 @@
       <div class="content-overlay">
         <!-- 图片和按钮容器 -->
         <div class="image-button-container">
-          <img src="url(images/报名.jpg)" alt="Centered Image" class="centered-image" />
+          <img src="/images/报名.jpg" alt="Centered Image" class="centered-image" />
           <button class="modal-button" @click="showModal('googleFormModal')">填写Google表单</button>
           <button class="modal-button" @click="showModal('microsoftFormModal')">填写Microsoft表单</button>
         </div>
