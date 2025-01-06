@@ -93,6 +93,7 @@
 
     <section class="contact-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
       <div class="content-overlay">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfbQndahO_5c3buzPvWLsKlFY-t3zXW7GpAlL4t71gb_j5bIw/viewform?embedded=true" width="100%" height="1297" frameborder="0" marginheight="0" marginwidth="0">正在加载…</iframe>
         <h2>联系我们</h2>
         <div class="contact-info">
           <p>📧 Email: info@aicamp.edu.cn</p>
