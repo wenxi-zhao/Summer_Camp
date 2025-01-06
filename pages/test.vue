@@ -102,14 +102,22 @@
       </div>
     </section>
 
-    <button @click="showModal('googleFormModal')">填写Google表单</button>
-    <button @click="showModal('microsoftFormModal')">填写Microsoft表单</button>
-
+    <section class="contact-section" :style="{ backgroundImage: 'url(images/hour-of-ai.jpg)' }">
+      <div class="content-overlay">
+        <!-- 图片和按钮容器 -->
+        <div class="image-button-container">
+          <img src="images/报名.jpg" alt="Centered Image" class="centered-image" />
+          <button class="modal-button" @click="showModal('googleFormModal')">填写Google表单</button>
+          <button class="modal-button" @click="showModal('microsoftFormModal')">填写Microsoft表单</button>
+        </div>
+      </div>
+    </section>
+    
     <!-- Google表单模态窗口 -->
     <div v-if="googleFormModal" class="modal-overlay" @click="closeModal('googleFormModal')">
       <div class="modal-content" @click.stop>
         <h2>Google表单</h2>
-        <iframe :src="googleFormSrc" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe :src="https://docs.google.com/forms/d/e/1FAIpQLSfbQndahO_5c3buzPvWLsKlFY-t3zXW7GpAlL4t71gb_j5bIw/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         <button @click="closeModal('googleFormModal')">关闭</button>
       </div>
     </div>
@@ -118,7 +126,7 @@
     <div v-if="microsoftFormModal" class="modal-overlay" @click="closeModal('microsoftFormModal')">
       <div class="modal-content" @click.stop>
         <h2>Microsoft表单</h2>
-        <iframe :src="microsoftFormSrc" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe :src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZAAAHOD9tUQk9CTlMzU1QxV1pBSVZVTDU2TE5OWFIyRS4u" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         <button @click="closeModal('microsoftFormModal')">关闭</button>
       </div>
     </div>
@@ -145,44 +153,6 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* 确保模态窗口在最上层 */
-}
-
-.modal-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  width: 80%;
-  max-width: 600px;
-  position: relative; /* 确保按钮可以绝对定位 */
-}
-
-.modal-content h2 {
-  margin-top: 0;
-}
-
-.modal-content button {
-  margin-top: 20px;
-  display: block;
-}
-
-/* 阻止模态内容点击事件冒泡 */
-.modal-content {
-  position: relative;
-}
-</style>
 
 <style scoped>
 .three-line {
@@ -688,5 +658,60 @@ h2, h3, h4, ul, li, p {
     width: 100%;
     text-align: center;
   }
+}
+
+/* 报名按钮 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* 确保模态窗口在最上层 */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+  position: relative; /* 确保按钮可以绝对定位 */
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  display: block;
+}
+
+/* 阻止模态内容点击事件冒泡 */
+.modal-content {
+  position: relative;
+}
+
+.image-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-image {
+  max-width: 100%;
+  height: auto;
+  margin: 0 20px; /* 给图片两边留出空间 */
+}
+
+.modal-button {
+  padding: 15px 30px; /* 增加按钮的内边距 */
+  font-size: 18px; /* 增大字体大小 */
+  margin: 0 10px; /* 给按钮两边留出空间 */
 }
 </style>
