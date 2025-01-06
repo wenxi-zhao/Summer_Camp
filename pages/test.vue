@@ -117,16 +117,16 @@
     <div v-if="googleFormModal" class="modal-overlay" @click="closeModal('googleFormModal')">
       <div class="modal-content" @click.stop>
         <h2>Google表单</h2>
-        <iframe :src="https://docs.google.com/forms/d/e/1FAIpQLSfbQndahO_5c3buzPvWLsKlFY-t3zXW7GpAlL4t71gb_j5bIw/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe :src="googleFormSrc" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         <button @click="closeModal('googleFormModal')">关闭</button>
       </div>
     </div>
-
+    
     <!-- Microsoft表单模态窗口 -->
     <div v-if="microsoftFormModal" class="modal-overlay" @click="closeModal('microsoftFormModal')">
       <div class="modal-content" @click.stop>
         <h2>Microsoft表单</h2>
-        <iframe :src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZAAAHOD9tUQk9CTlMzU1QxV1pBSVZVTDU2TE5OWFIyRS4u" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe :src="microsoftFormSrc" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         <button @click="closeModal('microsoftFormModal')">关闭</button>
       </div>
     </div>
@@ -139,8 +139,8 @@ export default {
     return {
       googleFormModal: false,
       microsoftFormModal: false,
-      googleFormSrc: 'https://docs.google.com/forms/d/your-google-form-id/viewform?embedded=true',
-      microsoftFormSrc: 'https://forms.office.com/Pages/ResponsePage.aspx?id=your-microsoft-form-id'
+      googleFormSrc: 'https://docs.google.com/forms/d/e/1FAIpQLSfbQndahO_5c3buzPvWLsKlFY-t3zXW7GpAlL4t71gb_j5bIw/viewform?embedded=true',
+      microsoftFormSrc: 'https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZAAAHOD9tUQk9CTlMzU1QxV1pBSVZVTDU2TE5OWFIyRS4u'
     };
   },
   methods: {
