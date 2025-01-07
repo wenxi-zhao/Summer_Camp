@@ -695,8 +695,9 @@ h2, h3, h4, ul, li, p {
 }
 
 .info-text {
-  flex: 0 0 33.333%; /* 限制文字区域为页面宽度的三分之一 */
+  flex: 0 0 30%; /* 限制文字区域为页面宽度的三分之一 */
   padding-right: 20px; /* 根据需要调整与图片的间距 */
+  padding-left: 10%;
   text-align: left; /* 文字左对齐 */
   vertical-align: middle; /* 垂直居中 */
 }
@@ -715,5 +716,9 @@ img {
 
 .info-text ul {
   margin-bottom: 20px; /* 为每个无序列表添加下外边距 */
+}
+
+.info-text h3 {
+  font-size: 1.5em;
 }
 </style>
