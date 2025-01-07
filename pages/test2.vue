@@ -695,6 +695,11 @@ h2, h3, h4, ul, li, p {
 }
 
 .info-text {
+  position: relative; /* 设置相对定位，以便伪元素可以相对于此元素定位 */
+  padding: 20px; /* 根据需要调整内边距 */
+  background-color: rgba(107, 52, 147, 0.9); /* 设置背景颜色 */
+  border-radius: 10px; /* 设置圆角 */
+  color: white; /* 设置文字颜色，确保在深色背景上可见 */
   flex: 0 0 30%; /* 限制文字区域为页面宽度的三分之一 */
   padding-right: 20px; /* 根据需要调整与图片的间距 */
   padding-left: 10%;
@@ -702,6 +707,18 @@ h2, h3, h4, ul, li, p {
   vertical-align: middle; /* 垂直居中 */
 }
 
+.info-text::before {
+  content: ''; /* 伪元素需要内容，即使我们不显示任何文本 */
+  position: absolute; /* 绝对定位 */
+  top: 0; /* 从顶部开始 */
+  left: 0; /* 从左侧开始 */
+  right: 0; /* 到右侧结束 */
+  bottom: 0; /* 到底部结束 */
+  background-color: rgba(107, 52, 147, 0.9); /* 背景颜色 */
+  border-radius: 10px; /* 圆角 */
+  z-index: -1; /* 确保伪元素在内容后面 */
+}
+  
 .info-image img {
   flex: 0 0 auto; /* 图片区域不伸缩 */
   width: 50%; /* 图片缩小到50%大小 */
@@ -710,7 +727,7 @@ h2, h3, h4, ul, li, p {
   max-width: 100%; /* 确保图片不会超出容器 */
   height: auto; /* 保持图片比例 */
   margin-left: auto; /* 自动左边距，将图片推向右侧 */
-  margin-right: 10%; /* 与文字的间距，可根据需要调整 */
+  margin-right: 40%; /* 与文字的间距，可根据需要调整 */
 }
 
 .info-text ul {
