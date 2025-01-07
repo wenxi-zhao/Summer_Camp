@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section class="hero-banner" :style="{ backgroundImage: 'url(images/computer.jpg)' }">
+    <section class="hero-banner" :style="{ backgroundImage: 'url(/Summer_Camp/images/computer.jpg)' }">
       <div class="content-overlay" >
         <div class="banner1">
           <h1 id="data-h1">数据科学夏令营</h1>
@@ -18,7 +18,7 @@
       </div>
     </section>
 
-    <section class="instructors-section" :style="{ backgroundImage: 'url(images/computer.jpg)' }">
+    <section class="instructors-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/computer.jpg)' }">
       <div class="content-overlay">
         <div class="instructors-text">
           <h3>课程介绍</h3>
@@ -47,7 +47,7 @@
       </div>
     </section>
 
-    <section class="features-section" :style="{ backgroundImage: 'url(images/computer.jpg)' }">
+    <section class="features-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/computer.jpg)' }">
       <div class="content-overlay">
         <div class="professors-list">
           <div class="three-tutor1"></div>
@@ -75,23 +75,29 @@
       </div>
     </section>
 
-    <section class="testimonials-section" :style="{ backgroundImage: 'url(images/hour-of-ai.jpg)' }">
+    <section class="testimonials-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/computer.jpg)' }">
       <div class="content-overlay">
-        <h2>学员反馈</h2>
-        <div class="testimonial-grid">
-          <div class="testimonial-card">
-            <p>"夏令营让我对AI有了全新的认识，不仅学到了实用的编程技能，更重要的是培养了解决问题的思维方式。"</p>
-            <div class="testimonial-author">-- 张同学，2023届学员</div>
-          </div>
-          <div class="testimonial-card">
-            <p>"导师们都很专业，课程安排也很合理，特别是实战项目的经历对我申请大学很有帮助。"</p>
-            <div class="testimonial-author">-- 李同学，2023届学员</div>
-          </div>
+        <div class="four-line"></div>
+        <div class="four-fish"></div>
+        <div class = "student-feedback">
+          <h3>学员反馈</h3>
+          <div class = "color-block"></div>
+        </div>
+        <div class="feedback-block">
+          <div class="feedback-block-1"><span>"夏令营让我对AI有了全新的认识，不仅学到了实用的编程技能，更重要的是培养了解决问题的思维方式。"</span></div>
+          <div class="feedback-block-2"><span>"导师们都很专业，课程安排也很合理，特别是实战项目的经历对我申请大学很有帮助。"</span></div>
+          <div class="feedback-block-3"><span>"人都超级好！我真的好喜欢好爱，帅哥老师还有美女姐姐老师人都很好相处，很耐心地回答问题！互动式的教学真的很有效很喜欢！"</span></div>
+        </div>
+        <div class="feedback-block2">
+          <div class="feedback-block2-1"><span>"哈哈哈哈其实我觉得现在这个schedule我还是很满意的，又轻松又充实。第二周有一天好多lecture会有点累，课程贴合了国外大学所以也算好。食物也好吃！团队还是很重要的！其他还是很不错啦！喜欢！！！"</span></div>
+          <div class="feedback-block2-2"><span>"充实的~能够获得足够的情绪价值的，能学到真正知识的，不搞任何形式主义的，是一个提升自己的好的机会。老师认真辅导，帮助同学理解问题，这次真的很满意！"</span></div>
+          <div class="feedback-block2-3"><span>"非常好，课程形式特别喜欢，认识了好棒的老师，结交了朋友，依依不舍。"</span></div>
+          <div class="feedback-block2-4"><span>"老师和助教们都很友善亲切，教学方式让我们很放松，保持很好的学习状态，激发了我们的学习兴趣，有点难，但总体很好。</span></div>
         </div>
       </div>
     </section>
 
-    <section class="contact-section" :style="{ backgroundImage: 'url(images/hour-of-ai.jpg)' }">
+    <!-- <section class="contact-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
       <div class="content-overlay">
         <h2>联系我们</h2>
         <div class="contact-info">
@@ -100,15 +106,14 @@
           <p>📍 地址: xxxxx</p>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
-
 </template>
 
 <style scoped>
 .three-line {
   position: absolute; 
-  background-image: url('images/three-line.png');
+  background-image: url('/Summer_Camp/images/three-line.png');
   width: 25vw;
   height: 25vw;
   bottom: -30%;
@@ -116,7 +121,7 @@
 }
 
 .three-tutor1 {
-  background-image: url('images/three-tutor1.png');
+  background-image: url('/Summer_Camp/images/three-tutor1.png');
   width: 45vw;
   height: 54vh;
 }
@@ -151,8 +156,35 @@
   z-index: 0;
 }
 
+.student-feedback {
+  position: relative;
+  top: 10%;
+  left: 13%;
+  display: inline-block;
+  z-index: 1; 
+}
+
+.testimonials-section .student-feedback h3 {
+  font-size: 2.4em;
+  letter-spacing: 5px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 5px 4px 4px #000000; 
+  font-weight: 400;
+}
+
+.student-feedback .color-block {
+  background-color: rgba(107, 52, 147, 0.9);
+  width: 12vw;
+  height: 2.6vh;
+  position: absolute; /* 绝对定位 */
+  top: 54%;
+  left: -32%;
+  z-index: 0;
+}
+
 .three-tutor2{
-  background-image: url('images/three-tutor2.png');
+  background-image: url('/Summer_Camp/images/three-tutor2.png');
   width: 32vw;
   height: 32vh;
   position: absolute;
@@ -198,7 +230,16 @@
 .center-line,
 .three-tutor1,
 .three-tutor2,
-.three-line {
+.three-line,
+.feedback-block-1,
+.feedback-block-2,
+.feedback-block-3,
+.feedback-block2-1,
+.feedback-block2-2,
+.feedback-block2-3,
+.feedback-block2-4,
+.four-line,
+.four-fish{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -212,7 +253,7 @@
 
 .center-img {
   position: absolute; 
-  background-image: url('images/img-2.jpg');
+  background-image: url('/Summer_Camp/images/img-2.jpg');
   width: 36vw;
   height: 36vw;
   left: 50%;
@@ -223,7 +264,7 @@
 
 .center-img-redcircle {
   position: absolute; 
-  background-image: url('images/2-redcircle.png');
+  background-image: url('/Summer_Camp/images/2-redcircle.png');
   width: 40vw;
   height: 40vw;
   left: 63%;
@@ -233,12 +274,30 @@
 
 .center-line {
   position: absolute; 
-  background-image: url('images/2-line.png');
+  background-image: url('/Summer_Camp/images/2-line.png');
   width: 15vw;
   height: 15vw;
   left: 74%;
   transform: translateX(-50%); /* position+left+transform实现块儿元素的水平居中 */
   top: 1%;
+}
+
+.four-line {
+  position: absolute; 
+  background-image: url('/Summer_Camp/images/four-line.png');
+  width: 25vw;
+  height: 14vw;
+  left: 9%;
+  top: 8%;
+}
+
+.four-fish {
+  position: absolute; 
+  background-image: url('/Summer_Camp/images/four-fish.png');
+  width: 28vw;
+  height: 10vw;
+  left: 70%;
+  top: 82%;
 }
 
 .right-img-1, .right-img-2, .right-img-3 {
@@ -256,15 +315,103 @@
 }
 
 .right-img-1 {
-  background-image: url('images/2-small-img-1.png');
+  background-image: url('/Summer_Camp/images/2-small-img-1.png');
 }
 
 .right-img-2 {
-  background-image: url('images/2-small-img-2.png');
+  background-image: url('/Summer_Camp/images/2-small-img-2.png');
 }
 
 .right-img-3 {
-  background-image: url('images/2-small-img-3.png');
+  background-image: url('/Summer_Camp/images/2-small-img-3.png');
+}
+
+.feedback-block{
+  position: absolute; 
+  top: 22vh;
+  left: 12vw;
+  
+}
+
+.feedback-block span {
+  position: relative;
+  left: 10%;
+  width: 85%;
+  line-height: 1.7;
+  text-shadow: 0px 0px 2px #000000;
+  font-size: 1.1em;
+  font-weight: 100;
+  letter-spacing: 1.2px;
+  color: black;
+}
+
+.feedback-block-1, .feedback-block-2, .feedback-block-3 {
+  width: 28vw;
+  height: 13vh;
+  background-image: url('/Summer_Camp/images/four-chatbox.png');
+  position:relative;
+  display: flex;
+  align-items: center;
+}
+
+.feedback-block-3 span{
+  top: 10%;
+}
+
+.feedback-block-1, .feedback-block-2{
+  margin-bottom: 13vh;
+}
+
+.feedback-block2{
+  position: absolute; 
+  top: 11vh;
+  left: 50vw;
+  
+}
+
+.feedback-block2 span {
+  position: relative;
+  left: 10%;
+  width: 85%;
+  line-height: 1.7;
+  text-shadow: 0px 0px 2px #000000;
+  font-size: 1.1em;
+  font-weight: 100;
+  letter-spacing: 1.2px;
+  color: black;
+}
+
+.feedback-block2-1, .feedback-block2-2, .feedback-block2-3, .feedback-block2-4 {
+  width: 28vw;
+  height: 13vh;
+  
+  position:relative;
+  display: flex;
+  align-items: center;
+}
+
+.feedback-block2-1, .feedback-block2-2{
+  background-image: url('/Summer_Camp/images/four-chatboxlong.png');
+  width: 40vw;
+  height: 14vh;
+}
+
+.feedback-block2-3, .feedback-block2-4{
+  background-image: url('/Summer_Camp/images/four-chatbox.png');
+  width: 28vw;
+  height: 13vh;
+}
+
+.feedback-block2-1 span, .feedback-block2-2 span{
+  top: 10%;
+}
+
+.feedback-block2-4 span{
+  top: 10%;
+}
+
+.feedback-block2-1, .feedback-block2-2, .feedback-block2-3{
+  margin-bottom: 9vh;
 }
 
 .instructors-text,
