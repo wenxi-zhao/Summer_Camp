@@ -704,11 +704,13 @@ h2, h3, h4, ul, li, p {
 
 .info-image img {
   flex: 0 0 auto; /* 图片区域不伸缩 */
-  width: 30%; /* 图片缩小到50%大小 */
+  width: 50%; /* 图片缩小到50%大小 */
   height: auto; /* 保持图片比例 */
   vertical-align: middle; /* 垂直居中 */
   max-width: 100%; /* 确保图片不会超出容器 */
   height: auto; /* 保持图片比例 */
+  margin-left: auto; /* 自动左边距，将图片推向右侧 */
+  margin-right: 10%; /* 与文字的间距，可根据需要调整 */
 }
 
 .info-text ul {
