@@ -99,7 +99,6 @@
 
     <section class="contact-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
       <div class="content-overlay">
-        <h2>联系我们</h2>
         <div class="info-container"> <!-- 用于包含文字和图片的容器 -->
           <div class="info-text"> <!-- 文字内容 -->
             <h3>报名条件：</h3>
@@ -114,6 +113,7 @@
             <img src="/images/报名.jpg" alt="QR Code for Registration" />
           </div>
         </div>
+        <h2>联系我们</h2>
         <div class="contact-info">
           <p>📧 Email: info@aicamp.edu.cn</p>
           <p>📱 电话: xxxxxx</p>
