@@ -97,6 +97,29 @@
       </div>
     </section>
 
+    <section class="contact-section" :style="{ backgroundImage: 'url(images/hour-of-ai.jpg)' }">
+      <div class="content-overlay">
+        <div class="info-container">
+          <div class="info-text">
+            <h3>报名条件：</h3>
+            <ul>
+              <li> 青岛市范围内新初二、新初三学生；海尔学校在校高一、高二学生以及部分优秀学生。</li>
+              <li> 品学兼优，具备优秀数学学科素养、一定的计算机编程基础和良好的英语听说能力。</li>
+            </ul>
+            <h3>报名方式：</h3>
+            <ul>
+              <li> 学校推荐：符合上述报名条件的学生可由所在学校进行推荐。</li>
+              <li> 个人自荐：未获得学校推荐，但符合上述报名条件的学生，可通过个人提交简历的方式进行报名。</li>
+              <li> 简历提交：学校推荐或个人自荐的学生均需要通过线上方式（扫描右侧二维码）提交学生简历，简历提交截止于2024年7月3日12:00。（说明：海尔学校在校学生将单独组织报名。）</li>
+            </ul>
+          </div>
+        </div>
+        <div class="qr-code-image">
+          <img src="/images/报名.jpg" alt="QR Code for Registration" />
+        </div>
+      </div>
+    </section>
+
     <!-- <section class="contact-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
       <div class="content-overlay">
         <h2>联系我们</h2>
@@ -756,5 +779,52 @@ h2, h3, h4, ul, li, p {
     width: 100%;
     text-align: center;
   }
+}
+
+/* 报名信息 */
+.content-overlay {
+  width: 100%; /* 根据需要调整宽度 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  width: 100%; /* 限制容器宽度 */
+}
+
+.info-text {
+  flex: 0 0 40%;
+  position: relative; /* 设置相对定位，以便伪元素可以相对于此元素定位 */
+  padding: 20px; /* 根据需要调整内边距 */
+  background-color: rgba(107, 52, 147, 0.5); /* 设置背景颜色 */
+  border-radius: 0 0 100px 0; /* 设置三个角为直角，右下角为圆角20px */
+  color: white; /* 设置文字颜色，确保在深色背景上可见 */
+  flex: 0 0 45%; /* 限制文字区域为页面宽度的三分之一 */
+  padding-right: 50px; /* 根据需要调整与图片的间距 */
+  padding-left: 5%;
+  text-align: left; /* 文字左对齐 */
+  vertical-align: middle; /* 垂直居中 */
+}
+
+.qr-code-image img {
+  position: absolute; /* 绝对定位，使图片相对于最近的已定位祖先元素定位 */
+  right: 15%; /* 图片距离右侧边缘5% */
+  top: 50%; /* 图片距离顶部50% */
+  transform: translateY(-50%); /* 垂直方向上移动自身高度的50%，实现垂直居中 */
+  width: 15%; /* 图片宽度为容器宽度的20% */
+  height: auto; /* 高度自动调整，保持宽高比 */
+  max-width: 100%; /* 确保图片不会超出容器宽度 */
+  flex: 0 0 auto; /* 图片区域不伸缩 */
+}
+
+.info-text ul {
+  margin-bottom: 20px; /* 为每个无序列表添加下外边距 */
+}
+
+.info-text h3 {
+  font-size: 1.5em;
 }
 </style>
