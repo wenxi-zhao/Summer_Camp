@@ -702,7 +702,7 @@ h2, h3, h4, ul, li, p {
   transform: skew(-10deg);
   color: white; /* 设置文字颜色，确保在深色背景上可见 */
   flex: 0 0 30%; /* 限制文字区域为页面宽度的三分之一 */
-  padding-right: 150px; /* 根据需要调整与图片的间距 */
+  padding-right: 450px; /* 根据需要调整与图片的间距 */
   padding-left: 5%;
   text-align: left; /* 文字左对齐 */
   vertical-align: middle; /* 垂直居中 */
