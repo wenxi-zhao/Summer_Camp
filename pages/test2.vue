@@ -678,9 +678,12 @@ h2, h3, h4, ul, li, p {
 }
 
 .content-overlay {
+  background: rgba(0, 0, 0, 0.4); /* 调整透明度和颜色 */
+  color: white; /* 确保文字颜色为白色 */
+  height: 100vh; /* 根据需要调整高度 */
   width: 100%; /* 根据需要调整宽度 */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* 确保文字和图片并排 */
   align-items: center;
 }
 
@@ -691,21 +694,21 @@ h2, h3, h4, ul, li, p {
 }
 
 .info-text {
-  flex: 0 0 33.333%; /* 限制文字区域为页面宽度的三分之一 */
+  flex: 0 0 50%; /* 限制文字区域为页面宽度的一半 */
   padding-right: 20px; /* 根据需要调整与图片的间距 */
   text-align: left; /* 文字左对齐 */
   vertical-align: middle; /* 垂直居中 */
 }
 
 .info-image {
-  flex: 0 0 auto; /* 图片区域不伸缩 */
-  width: 50%; /* 图片缩小到50%大小 */
-  height: auto; /* 保持图片比例 */
+  flex: 0 0 50%; /* 图片区域也限制为页面宽度的一半 */
   vertical-align: middle; /* 垂直居中 */
 }
 
-img {
-  max-width: 100%; /* 确保图片不会超出容器 */
+.info-image img {
+  width: 50%; /* 图片缩小到50%大小 */
   height: auto; /* 保持图片比例 */
+  display: block; /* 确保图片是块级元素，以便居中 */
+  margin: 0 auto; /* 水平居中 */
 }
 </style>
