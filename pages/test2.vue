@@ -702,14 +702,11 @@ h2, h3, h4, ul, li, p {
   vertical-align: middle; /* 垂直居中 */
 }
 
-.info-image {
+.info-image img {
   flex: 0 0 auto; /* 图片区域不伸缩 */
-  width: 50%; /* 图片缩小到50%大小 */
+  width: 30%; /* 图片缩小到50%大小 */
   height: auto; /* 保持图片比例 */
   vertical-align: middle; /* 垂直居中 */
-}
-
-img {
   max-width: 100%; /* 确保图片不会超出容器 */
   height: auto; /* 保持图片比例 */
 }
