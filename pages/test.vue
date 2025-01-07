@@ -757,10 +757,26 @@ h2, h3, h4, ul, li, p {
 }
 
 .info-text {
+  position: relative;
+  background-color: rgba(107, 52, 147, 0.9);
+  border-radius: 10px;
+  color: white;
   flex: 0 0 66.666%; /* 增加文字区域宽度，使其向右移动 */
   padding-right: 20px; /* 根据需要调整与图片的间距 */
   text-align: left; /* 文字左对齐 */
   vertical-align: middle; /* 垂直居中 */
+}
+
+.info-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(107, 52, 147, 0.9);
+  border-radius: 10px;
+  z-index: -1;
 }
 
 .info-image {
