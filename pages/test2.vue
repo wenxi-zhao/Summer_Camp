@@ -712,4 +712,8 @@ img {
   max-width: 100%; /* 确保图片不会超出容器 */
   height: auto; /* 保持图片比例 */
 }
+
+.info-text ul {
+  margin-bottom: 20px; /* 为每个无序列表添加下外边距 */
+}
 </style>
