@@ -699,7 +699,7 @@ h2, h3, h4, ul, li, p {
   position: relative; /* 设置相对定位，以便伪元素可以相对于此元素定位 */
   padding: 20px; /* 根据需要调整内边距 */
   background-color: rgba(107, 52, 147, 0.6); /* 设置背景颜色 */
-  transform: skew(-10deg);
+  border-radius: 10px; /* 设置圆角 */
   color: white; /* 设置文字颜色，确保在深色背景上可见 */
   flex: 0 0 30%; /* 限制文字区域为页面宽度的三分之一 */
   padding-right: 450px; /* 根据需要调整与图片的间距 */
@@ -716,7 +716,7 @@ h2, h3, h4, ul, li, p {
   right: 0; /* 到右侧结束 */
   bottom: 0; /* 到底部结束 */
   background-color: rgba(107, 52, 147, 0.6); /* 背景颜色 */
-  transform: skew(-10deg);
+  border-radius: 10px; /* 圆角 */
   z-index: -1; /* 确保伪元素在内容后面 */
 }
   
