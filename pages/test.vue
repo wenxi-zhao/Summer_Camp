@@ -116,7 +116,7 @@
             <p>2.3 简历提交：学校推荐或个人自荐的学生均需要通过线上方式（扫描右侧二维码）提交学生简历，简历提交截止于2024年7月3日12:00。（说明：海尔学校在校学生将单独组织报名。）</p>
           </div>
           <div class="info-image"> <!-- 二维码图片 -->
-            <img src="path_to_your_qrcode_image.png" alt="QR Code for Registration" />
+            <img src="/images/报名.jpg" />
           </div>
         </div>
       </div>
