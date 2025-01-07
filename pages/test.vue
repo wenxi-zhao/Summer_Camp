@@ -117,6 +117,7 @@
           <div class="info-image"> <!-- 二维码图片 -->
             <img src="/images/报名.jpg" alt="QR Code for Registration" />
           </div>
+          <div class="purple-rectangle"></div>
         </div>
       </div>
     </section>
@@ -752,10 +753,11 @@ h2, h3, h4, ul, li, p {
   display: flex;
   align-items: center;
   width: 100%; /* 限制容器宽度 */
+  position: relative; /* 设置相对定位，以便紫色矩形可以绝对定位 */
 }
 
 .info-text {
-  flex: 0 0 33.333%; /* 限制文字区域为页面宽度的三分之一 */
+  flex: 0 0 66.666%; /* 增加文字区域宽度，使其向右移动 */
   padding-right: 20px; /* 根据需要调整与图片的间距 */
   text-align: left; /* 文字左对齐 */
   vertical-align: middle; /* 垂直居中 */
@@ -766,6 +768,16 @@ h2, h3, h4, ul, li, p {
   width: 50%; /* 图片缩小到50%大小 */
   height: auto; /* 保持图片比例 */
   vertical-align: middle; /* 垂直居中 */
+}
+
+.purple-rectangle {
+  position: absolute; /* 绝对定位 */
+  top: 0;
+  left: 0;
+  width: 66.666%; /* 与文字区域同宽 */
+  height: 100%; /* 与父容器同高 */
+  background-color: rgba(128, 0, 128, 0.5); /* 紫色背景，透明度50% */
+  z-index: -1; /* 确保矩形在文字下方 */
 }
 
 img {
