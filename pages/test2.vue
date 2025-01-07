@@ -97,7 +97,7 @@
       </div>
     </section>
 
-    <!-- <section class="contact-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
+    <section class="contact-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
       <div class="content-overlay">
         <h2>联系我们</h2>
         <div class="info-container"> <!-- 用于包含文字和图片的容器 -->
@@ -111,7 +111,7 @@
             <p>2.3 简历提交：学校推荐或个人自荐的学生均需要通过线上方式（扫描右侧二维码）提交学生简历，简历提交截止于2024年7月3日12:00。（说明：海尔学校在校学生将单独组织报名。）</p>
           </div>
           <div class="info-image"> <!-- 二维码图片 -->
-            <img src="path_to_your_qrcode_image.png" alt="QR Code for Registration" />
+            <img src="/images/报名.jpg" alt="QR Code for Registration" />
           </div>
         </div>
         <div class="contact-info">
@@ -120,7 +120,7 @@
           <p>📍 地址: xxxxx</p>
         </div>
       </div>
-    </section> -->
+    </section>
   </div>
 </template>
 
