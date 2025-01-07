@@ -702,7 +702,7 @@ h2, h3, h4, ul, li, p {
   border-radius: 10px; /* 设置圆角 */
   color: white; /* 设置文字颜色，确保在深色背景上可见 */
   flex: 0 0 30%; /* 限制文字区域为页面宽度的三分之一 */
-  padding-right: 450px; /* 根据需要调整与图片的间距 */
+  padding-right: 50px; /* 根据需要调整与图片的间距 */
   padding-left: 5%;
   text-align: left; /* 文字左对齐 */
   vertical-align: middle; /* 垂直居中 */
@@ -725,10 +725,9 @@ h2, h3, h4, ul, li, p {
   width: 50%; /* 图片缩小到50%大小 */
   height: auto; /* 保持图片比例 */
   vertical-align: middle; /* 垂直居中 */
+  right: 20%;
   max-width: 100%; /* 确保图片不会超出容器 */
   height: auto; /* 保持图片比例 */
-  margin-left: 20px; /* 自动左边距，将图片推向右侧 */
-  margin-right: 10%;
 }
 
 .info-text ul {
