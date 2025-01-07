@@ -705,7 +705,6 @@ h2, h3, h4, ul, li, p {
   padding-left: 10%;
   text-align: left; /* 文字左对齐 */
   vertical-align: middle; /* 垂直居中 */
-  box-sizing: border-box;
 }
 
 .info-text::before {
