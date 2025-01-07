@@ -102,9 +102,8 @@
       </div>
     </section>
 
-    <section class="contact-section" style="backgroundImage: 'url(images/hour-of-ai.jpg')">
+    <section class="contact-section" :style="{ backgroundImage: 'url(images/hour-of-ai.jpg)' }">
       <div class="content-overlay">
-        <!-- 新增内容 -->
         <div class="info-container"> <!-- 用于包含文字和图片的容器 -->
           <div class="info-text"> <!-- 文字内容 -->
             <h3>报名条件：</h3>
@@ -116,7 +115,7 @@
             <p>2.3 简历提交：学校推荐或个人自荐的学生均需要通过线上方式（扫描右侧二维码）提交学生简历，简历提交截止于2024年7月3日12:00。（说明：海尔学校在校学生将单独组织报名。）</p>
           </div>
           <div class="info-image"> <!-- 二维码图片 -->
-            <img src="/images/报名.jpg" />
+            <img src="/images/报名.jpg" alt="QR Code for Registration" />
           </div>
         </div>
       </div>
@@ -735,18 +734,42 @@ h2, h3, h4, ul, li, p {
   margin: 0 10px; /* 给按钮两边留出空间 */
 }
 
-.info-container {
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* 根据需要调整高度 */
+}
+
+.content-overlay {
+  width: 100%; /* 根据需要调整宽度 */
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  width: 100%; /* 限制容器宽度 */
 }
 
 .info-text {
-  flex: 1;
-  margin-right: 20px; /* 根据需要调整间距 */
+  flex: 0 0 33.333%; /* 限制文字区域为页面宽度的三分之一 */
+  padding-right: 20px; /* 根据需要调整与图片的间距 */
+  text-align: left; /* 文字左对齐 */
+  vertical-align: middle; /* 垂直居中 */
 }
 
 .info-image {
-  flex: 0 0 auto; /* 确保图片不会伸缩 */
+  flex: 0 0 auto; /* 图片区域不伸缩 */
+  width: 50%; /* 图片缩小到50%大小 */
+  height: auto; /* 保持图片比例 */
+  vertical-align: middle; /* 垂直居中 */
+}
+
+img {
+  max-width: 100%; /* 确保图片不会超出容器 */
+  height: auto; /* 保持图片比例 */
 }
 </style>
