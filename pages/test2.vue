@@ -5,12 +5,16 @@
         <div class="info-container">
           <div class="info-text">
             <h3>报名条件：</h3>
-            <p>1.1 青岛市范围内新初二、新初三学生；海尔学校在校高一、高二学生以及部分优秀学生。</p>
-            <p>1.2 品学兼优，具备优秀数学学科素养、一定的计算机编程基础和良好的英语听说能力。</p>
+            <ul>
+              <li> 青岛市范围内新初二、新初三学生；海尔学校在校高一、高二学生以及部分优秀学生。</li>
+              <li> 品学兼优，具备优秀数学学科素养、一定的计算机编程基础和良好的英语听说能力。</li>
+            </ul>
             <h3>报名方式：</h3>
-            <p>2.1 学校推荐：符合上述报名条件的学生可由所在学校进行推荐。</p>
-            <p>2.2 个人自荐：未获得学校推荐，但符合上述报名条件的学生，可通过个人提交简历的方式进行报名。</p>
-            <p>2.3 简历提交：学校推荐或个人自荐的学生均需要通过线上方式（扫描右侧二维码）提交学生简历，简历提交截止于2024年7月3日12:00。（说明：海尔学校在校学生将单独组织报名。）</p>
+            <ul>
+              <li> 学校推荐：符合上述报名条件的学生可由所在学校进行推荐。</li>
+              <li> 个人自荐：未获得学校推荐，但符合上述报名条件的学生，可通过个人提交简历的方式进行报名。</li>
+              <li> 简历提交：学校推荐或个人自荐的学生均需要通过线上方式（扫描右侧二维码）提交学生简历，简历提交截止于2024年7月3日12:00。（说明：海尔学校在校学生将单独组织报名。）</li>
+            </ul>
           </div>
           <div class="info-image">
             <img src="/images/报名.jpg" alt="QR Code for Registration" />
@@ -673,50 +677,39 @@ h2, h3, h4, ul, li, p {
 .contact-section {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* 从center改为flex-start，使得内容从顶部开始 */
-  height: 100%;
-  position: relative; /* 相对定位，以便添加蒙版 */
+  align-items: center;
+  height: 100%; /* 根据需要调整高度 */
 }
 
 .content-overlay {
-  width: 100%;
+  width: 100%; /* 根据需要调整宽度 */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  z-index: 1; /* 确保蒙版在内容之上 */
 }
 
 .info-container {
   display: flex;
   align-items: center;
-  width: 100%;
-  max-width: 800px; /* 限制最大宽度，根据需要调整 */
+  width: 100%; /* 限制容器宽度 */
 }
 
 .info-text {
-  flex: 1; /* 让文字区域占据剩余空间 */
-  padding-right: 20px;
-  text-align: left;
-  vertical-align: middle;
+  flex: 0 0 33.333%; /* 限制文字区域为页面宽度的三分之一 */
+  padding-right: 20px; /* 根据需要调整与图片的间距 */
+  text-align: left; /* 文字左对齐 */
+  vertical-align: middle; /* 垂直居中 */
 }
 
 .info-image {
-  flex: 0 0 auto;
-  width: 150px; /* 缩小二维码图片的宽度 */
-  height: auto;
-  vertical-align: middle;
+  flex: 0 0 auto; /* 图片区域不伸缩 */
+  width: 50%; /* 图片缩小到50%大小 */
+  height: auto; /* 保持图片比例 */
+  vertical-align: middle; /* 垂直居中 */
 }
 
-/* 添加紫色半透明蒙版 */
-.contact-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(107, 52, 147, 0.8); /* 紫色半透明背景 */
-  z-index: 0; /* 确保蒙版在内容之下 */
+img {
+  max-width: 100%; /* 确保图片不会超出容器 */
+  height: auto; /* 保持图片比例 */
 }
 </style>
