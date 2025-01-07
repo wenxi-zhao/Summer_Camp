@@ -1,5 +1,107 @@
 <template>
   <div class="container">
+    <section class="hero-banner" :style="{ backgroundImage: 'url(images/computer.jpg)' }">
+      <div class="content-overlay" >
+        <div class="banner1">
+          <h1 id="data-h1">数据科学夏令营</h1>
+          <h3>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—— 用编程与实践掌握未来，助力科学梦想起航</h3>
+          <div class="cta-buttons">
+            <NuxtLink to="/enrollment/form" class="primary-btn">立即报名</NuxtLink>
+          </div>
+        </div>
+        <aside class="banner-intro">
+          <div class = "color-block"></div>
+          <div class = "font-block">
+            <p class="intro-p1">专为初高中生设计的AI与编程实践课程，通过动手制作智能小车，在趣味十足的项目中学习Python编程、机器学习、深度学习等前沿技术，课程由顶尖高校导师亲自指导，带领学生走在科技最前沿。</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="instructors-section" :style="{ backgroundImage: 'url(images/computer.jpg)' }">
+      <div class="content-overlay">
+        <div class="instructors-text">
+          <h3>课程介绍</h3>
+          <h4 class="h4-1">理论与实践并重</h4>
+          <ul>
+            <li class="li-f">Python编程基础与应用</li>
+            <li>机器学习与深度学习算法</li>
+            <li class="li-e">实战项目驱动，技术应用全面提升</li>
+          </ul>
+          <h4 class="h4-2">动手实践，寓教于乐</h4>
+          <ul>
+            <li class="li-f">搭建树莓派驱动的智能小车，探索硬件与编程的结合</li>
+            <li>使用真实数据集进行建模与分析，解决实际问题</li>
+            <li>团队协作，提升工程开发能力</li>
+            <li class="li-e">成果展示与英文小组汇报，提升演讲技能与语言表达能力，培养国际化沟通技巧</li>
+          </ul>
+        </div>
+        <div class="center-img-redcircle"></div>
+        <div class="center-line"></div>
+        <div class="center-img"></div>
+        <div class="right-img">
+          <div class="right-img-1"></div>
+          <div class="right-img-2"></div>
+          <div class="right-img-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-section" :style="{ backgroundImage: 'url(images/computer.jpg)' }">
+      <div class="content-overlay">
+        <div class="professors-list">
+          <div class="three-tutor1"></div>
+          <ul>
+            <li>哈佛大学生物医学信息学教授</li>
+            <li>哈佛大学生物统计学助理教授</li>
+            <li>多伦多大学统计科学系助理教授</li>
+            <li>杜克大学教授</li>
+            <li>浙江大学统计学教授</li>
+            <li>业界资深工程师</li>
+          </ul>
+          <div class="three-line"></div>
+        </div>
+        <div class = "team">
+          <h3>导师团队</h3>
+          <div class = "color-block"></div>
+        </div>
+        <div class="three-tutor2"></div>
+        <aside class="tutor-intro">
+          <div class = "color-block"></div>
+          <div class = "font-block">
+            <p class="intro-p1">我们的导师团队由多位世界名校的教授及业界资深工程师组成，拥有丰富的教学经验和实践背景，致力于为学生提供优质的教育。</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="testimonials-section" :style="{ backgroundImage: 'url(images/hour-of-ai.jpg)' }">
+      <div class="content-overlay">
+        <h2>学员反馈</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p>"夏令营让我对AI有了全新的认识，不仅学到了实用的编程技能，更重要的是培养了解决问题的思维方式。"</p>
+            <div class="testimonial-author">-- 张同学，2023届学员</div>
+          </div>
+          <div class="testimonial-card">
+            <p>"导师们都很专业，课程安排也很合理，特别是实战项目的经历对我申请大学很有帮助。"</p>
+            <div class="testimonial-author">-- 李同学，2023届学员</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" :style="{ backgroundImage: 'url(images/hour-of-ai.jpg)' }">
+      <div class="content-overlay">
+        <h2>联系我们</h2>
+        <div class="contact-info">
+          <p>📧 Email: info@aicamp.edu.cn</p>
+          <p>📱 电话: xxxxxx</p>
+          <p>📍 地址: xxxxx</p>
+        </div>
+      </div>
+    </section>
+    
     <section class="contact-section" :style="{ backgroundImage: 'url(images/hour-of-ai.jpg)' }">
       <div class="content-overlay">
         <div class="info-container"> <!-- 用于包含文字和图片的容器 -->
