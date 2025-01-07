@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section class="hero-banner" :style="{ backgroundImage: 'url(/Summer_Camp/images/computer.jpg)' }">
+    <section class="hero-banner" :style="{ backgroundImage: 'url(images/computer.jpg)' }">
       <div class="content-overlay" >
         <div class="banner1">
           <h1 id="data-h1">数据科学夏令营</h1>
@@ -18,7 +18,7 @@
       </div>
     </section>
 
-    <section class="instructors-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/computer.jpg)' }">
+    <section class="instructors-section" :style="{ backgroundImage: 'url(images/computer.jpg)' }">
       <div class="content-overlay">
         <div class="instructors-text">
           <h3>课程介绍</h3>
@@ -47,7 +47,7 @@
       </div>
     </section>
 
-    <section class="features-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/computer.jpg)' }">
+    <section class="features-section" :style="{ backgroundImage: 'url(images/computer.jpg)' }">
       <div class="content-overlay">
         <div class="professors-list">
           <div class="three-tutor1"></div>
@@ -75,7 +75,7 @@
       </div>
     </section>
 
-    <section class="testimonials-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/computer.jpg)' }">
+    <section class="testimonials-section" :style="{ backgroundImage: 'url(images/computer.jpg)' }">
       <div class="content-overlay">
         <div class="four-line"></div>
         <div class="four-fish"></div>
@@ -97,7 +97,18 @@
       </div>
     </section>
 
-    <section class="contact-section" :style="{ backgroundImage: 'url(/Summer_Camp/images/hour-of-ai.jpg)' }">
+    <section class="contact-section" :style="{ backgroundImage: 'url(images/hour-of-ai.jpg)' }">
+      <div class="content-overlay">
+        <h2>联系我们</h2>
+        <div class="contact-info">
+          <p>📧 Email: info@aicamp.edu.cn</p>
+          <p>📱 电话: xxxxxx</p>
+          <p>📍 地址: xxxxx</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" :style="{ backgroundImage: 'url(images/hour-of-ai.jpg)' }">
       <div class="content-overlay">
         <div class="info-container"> <!-- 用于包含文字和图片的容器 -->
           <div class="info-text"> <!-- 文字内容 -->
@@ -113,12 +124,6 @@
             <img src="/images/报名.jpg" alt="QR Code for Registration" />
           </div>
         </div>
-        <h2>联系我们</h2>
-        <div class="contact-info">
-          <p>📧 Email: info@aicamp.edu.cn</p>
-          <p>📱 电话: xxxxxx</p>
-          <p>📍 地址: xxxxx</p>
-        </div>
       </div>
     </section>
   </div>
@@ -127,7 +132,7 @@
 <style scoped>
 .three-line {
   position: absolute; 
-  background-image: url('/Summer_Camp/images/three-line.png');
+  background-image: url('images/three-line.png');
   width: 25vw;
   height: 25vw;
   bottom: -30%;
@@ -135,7 +140,7 @@
 }
 
 .three-tutor1 {
-  background-image: url('/Summer_Camp/images/three-tutor1.png');
+  background-image: url('images/three-tutor1.png');
   width: 45vw;
   height: 54vh;
 }
@@ -198,7 +203,7 @@
 }
 
 .three-tutor2{
-  background-image: url('/Summer_Camp/images/three-tutor2.png');
+  background-image: url('images/three-tutor2.png');
   width: 32vw;
   height: 32vh;
   position: absolute;
@@ -267,7 +272,7 @@
 
 .center-img {
   position: absolute; 
-  background-image: url('/Summer_Camp/images/img-2.jpg');
+  background-image: url('images/img-2.jpg');
   width: 36vw;
   height: 36vw;
   left: 50%;
@@ -278,7 +283,7 @@
 
 .center-img-redcircle {
   position: absolute; 
-  background-image: url('/Summer_Camp/images/2-redcircle.png');
+  background-image: url('images/2-redcircle.png');
   width: 40vw;
   height: 40vw;
   left: 63%;
@@ -288,7 +293,7 @@
 
 .center-line {
   position: absolute; 
-  background-image: url('/Summer_Camp/images/2-line.png');
+  background-image: url('images/2-line.png');
   width: 15vw;
   height: 15vw;
   left: 74%;
@@ -298,7 +303,7 @@
 
 .four-line {
   position: absolute; 
-  background-image: url('/Summer_Camp/images/four-line.png');
+  background-image: url('images/four-line.png');
   width: 25vw;
   height: 14vw;
   left: 9%;
@@ -307,7 +312,7 @@
 
 .four-fish {
   position: absolute; 
-  background-image: url('/Summer_Camp/images/four-fish.png');
+  background-image: url('images/four-fish.png');
   width: 28vw;
   height: 10vw;
   left: 70%;
@@ -329,15 +334,15 @@
 }
 
 .right-img-1 {
-  background-image: url('/Summer_Camp/images/2-small-img-1.png');
+  background-image: url('images/2-small-img-1.png');
 }
 
 .right-img-2 {
-  background-image: url('/Summer_Camp/images/2-small-img-2.png');
+  background-image: url('images/2-small-img-2.png');
 }
 
 .right-img-3 {
-  background-image: url('/Summer_Camp/images/2-small-img-3.png');
+  background-image: url('images/2-small-img-3.png');
 }
 
 .feedback-block{
@@ -362,7 +367,7 @@
 .feedback-block-1, .feedback-block-2, .feedback-block-3 {
   width: 28vw;
   height: 13vh;
-  background-image: url('/Summer_Camp/images/four-chatbox.png');
+  background-image: url('images/four-chatbox.png');
   position:relative;
   display: flex;
   align-items: center;
@@ -405,13 +410,13 @@
 }
 
 .feedback-block2-1, .feedback-block2-2{
-  background-image: url('/Summer_Camp/images/four-chatboxlong.png');
+  background-image: url('images/four-chatboxlong.png');
   width: 40vw;
   height: 14vh;
 }
 
 .feedback-block2-3, .feedback-block2-4{
-  background-image: url('/Summer_Camp/images/four-chatbox.png');
+  background-image: url('images/four-chatbox.png');
   width: 28vw;
   height: 13vh;
 }
