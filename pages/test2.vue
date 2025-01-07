@@ -2,8 +2,8 @@
   <div class="container">
     <section class="contact-section" :style="{ backgroundImage: 'url(images/hour-of-ai.jpg)' }">
       <div class="content-overlay">
-        <div class="info-container"> <!-- 用于包含文字和图片的容器 -->
-          <div class="info-text"> <!-- 文字内容 -->
+        <div class="info-container">
+          <div class="info-text">
             <h3>报名条件：</h3>
             <p>1.1 青岛市范围内新初二、新初三学生；海尔学校在校高一、高二学生以及部分优秀学生。</p>
             <p>1.2 品学兼优，具备优秀数学学科素养、一定的计算机编程基础和良好的英语听说能力。</p>
@@ -12,7 +12,7 @@
             <p>2.2 个人自荐：未获得学校推荐，但符合上述报名条件的学生，可通过个人提交简历的方式进行报名。</p>
             <p>2.3 简历提交：学校推荐或个人自荐的学生均需要通过线上方式（扫描右侧二维码）提交学生简历，简历提交截止于2024年7月3日12:00。（说明：海尔学校在校学生将单独组织报名。）</p>
           </div>
-          <div class="info-image"> <!-- 二维码图片 -->
+          <div class="info-image">
             <img src="/images/报名.jpg" alt="QR Code for Registration" />
           </div>
         </div>
@@ -673,42 +673,50 @@ h2, h3, h4, ul, li, p {
 .contact-section {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100%; /* 根据需要调整高度 */
+  align-items: flex-start; /* 从center改为flex-start，使得内容从顶部开始 */
+  height: 100%;
+  position: relative; /* 相对定位，以便添加蒙版 */
 }
 
 .content-overlay {
-  background: rgba(0, 0, 0, 0.4); /* 调整透明度和颜色 */
-  color: white; /* 确保文字颜色为白色 */
-  height: 100vh; /* 根据需要调整高度 */
-  width: 100%; /* 根据需要调整宽度 */
+  width: 100%;
   display: flex;
-  justify-content: space-between; /* 确保文字和图片并排 */
+  justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1; /* 确保蒙版在内容之上 */
 }
 
 .info-container {
   display: flex;
   align-items: center;
-  width: 100%; /* 限制容器宽度 */
+  width: 100%;
+  max-width: 800px; /* 限制最大宽度，根据需要调整 */
 }
 
 .info-text {
-  flex: 0 0 50%; /* 限制文字区域为页面宽度的一半 */
-  padding-right: 20px; /* 根据需要调整与图片的间距 */
-  text-align: left; /* 文字左对齐 */
-  vertical-align: middle; /* 垂直居中 */
+  flex: 1; /* 让文字区域占据剩余空间 */
+  padding-right: 20px;
+  text-align: left;
+  vertical-align: middle;
 }
 
 .info-image {
-  flex: 0 0 50%; /* 图片区域也限制为页面宽度的一半 */
-  vertical-align: middle; /* 垂直居中 */
+  flex: 0 0 auto;
+  width: 150px; /* 缩小二维码图片的宽度 */
+  height: auto;
+  vertical-align: middle;
 }
 
-.info-image img {
-  width: 50%; /* 图片缩小到50%大小 */
-  height: auto; /* 保持图片比例 */
-  display: block; /* 确保图片是块级元素，以便居中 */
-  margin: 0 auto; /* 水平居中 */
+/* 添加紫色半透明蒙版 */
+.contact-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(107, 52, 147, 0.8); /* 紫色半透明背景 */
+  z-index: 0; /* 确保蒙版在内容之下 */
 }
 </style>
