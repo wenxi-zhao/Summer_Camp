@@ -695,14 +695,15 @@ h2, h3, h4, ul, li, p {
 }
 
 .info-text {
+  flex: 0 0 40%;
   position: relative; /* 设置相对定位，以便伪元素可以相对于此元素定位 */
   padding: 20px; /* 根据需要调整内边距 */
   background-color: rgba(107, 52, 147, 0.6); /* 设置背景颜色 */
   border-radius: 10px; /* 设置圆角 */
   color: white; /* 设置文字颜色，确保在深色背景上可见 */
   flex: 0 0 30%; /* 限制文字区域为页面宽度的三分之一 */
-  padding-right: 20px; /* 根据需要调整与图片的间距 */
-  padding-left: 10%;
+  padding-right: 40px; /* 根据需要调整与图片的间距 */
+  padding-left: 5%;
   text-align: left; /* 文字左对齐 */
   vertical-align: middle; /* 垂直居中 */
 }
@@ -726,8 +727,8 @@ h2, h3, h4, ul, li, p {
   vertical-align: middle; /* 垂直居中 */
   max-width: 100%; /* 确保图片不会超出容器 */
   height: auto; /* 保持图片比例 */
-  margin-left: auto; /* 自动左边距，将图片推向右侧 */
-  margin-right: 1%; /* 与文字的间距，可根据需要调整 */
+  margin-left: 20px; /* 自动左边距，将图片推向右侧 */
+  margin-right: 10%;
 }
 
 .info-text ul {
